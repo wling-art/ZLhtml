@@ -23,11 +23,11 @@ jobs:
 
       - name: Build the website
         run: |
-          export FLASK_APP=app.py # 将 "app.py" 替换为你的 Flask 应用的入口文件
-          flask build  # 使用适合你的项目的构建命令
+          export FLASK_APP=app.py  # 将 "app.py" 替换为你的 Flask 应用的入口文件
+          flask run --host=0.0.0.0 --port=5000 & sleep 5  # 在后台运行 Flask 服务器
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build # 将 "./build" 替换为你构建生成的网站文件的目录路径
+          publish_dir: ./ # 由于 Flask 会在运行时生成网站内容，所以将 "./" 作为发布目录
