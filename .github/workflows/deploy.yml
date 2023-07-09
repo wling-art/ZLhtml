@@ -29,5 +29,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          github_token: ${{ secrets.MYTOKEN }}
           publish_dir: ./ # 由于 Flask 会在运行时生成网站内容，所以将 "./" 作为发布目录
