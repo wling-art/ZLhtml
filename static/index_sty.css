@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef -
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('background.webp') center center no-repeat;
+    background-size: cover;
+}
+
+
+.nav-f {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background: #5cc2d470; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.nav-f.active {
+    background: #5cc2d470;
+    /* 渐渐显示颜色 */
+    transition: all 0.5s ease;
+}
+
+
+.home {
+    min-height: 100vh;
+    color: var(--text-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* 里侧边有点距离 */
+    padding-left: 10%;
+
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-last-of-type(1) {
+    margin-bottom: 2rem;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.about {
+    min-height: 100vh;
+    color: #1f242d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.about p {
+    max-width: 550px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* 与右边的图片隔开一点距离 */
+    line-height: 1.8;
+    padding-right: 10%;
+
+}
+
+.about-img img {
+    width: 45vw;
+}
+
+.title h1 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 900;
+    text-align: center;
+    margin: 20px;
+}
+
+
+.logo {
+    color: #fff;
+    font-size: 2em;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #5cc2d4;
+}

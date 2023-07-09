@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="static/main.css" />
+    <title>Login~</title>
+  </head>
+
+  <body>
+    <header>
+      <h2 class="logo">钟乐</h2>
+      <nav class="navigation">
+        <a href="index">Home</a>
+        <a href="index#about">关于</a>
+        <a href="#">封禁列表</a>
+        <a href="https://jq.qq.com/?_wv=1027&k=6ONq0n9F">交流群</a>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="form-box login">
+        <h2>登录！</h2>
+        <form method="POST">
+          {{ login_form.csrf_token }}
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="person-circle-outline"></ion-icon
+            ></span>
+            {{ login_form.username() }}
+            <label>用户名</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+            {{ login_form.password() }}
+            <label>密码</label>
+          </div>
+          <div class="remember-forgot">
+            <label>{{ login_form.cheackbox}}记住密码！</label>
+            <a href="#">咩！忘记密码了？</a>
+          </div>
+          <div class="error">{% if message %} {{message}} {% endif %}</div>
+          <div class="btn">{{ login_form.submit() }}</div>
+          <div class="login-register">
+            <p>
+              没有账户？
+              <a href="#" class="register-link">注册吧~</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <h2>注册？</h2>
+        <form method="POST">
+          {{ register_form.csrf_token }}
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="person-circle-outline"></ion-icon
+            ></span>
+            {{ register_form.username() }}
+            <label>用户名</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            {{ register_form.email() }}
+            <label>邮箱</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+            {{ register_form.password() }}
+            <label>密码</label>
+          </div>
+          <div class="remember-forgot">
+            <label>{{ register_form.cheackbox() }}同意那无形的协议~</label>
+          </div>
+          <div class="btn">{{register_form.submit() }}</div>
+          <div class="login-register">
+            <p>
+              原来你已经有账户了啊？
+              <a href="#" class="login-link">回去吧~</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="/static/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

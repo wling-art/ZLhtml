@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/static/index_sty.css" />
+    <title>钟乐服务器</title>
+  </head>
+
+  <body>
+    <div class="nav-f">
+      <h2 class="logo">钟乐</h2>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#about">关于</a>
+        <a href="#">封禁列表</a>
+        <a href="https://jq.qq.com/?_wv=1027&k=6ONq0n9F">交流群</a>
+        {% if 'username' in session %}
+        <a>Logged in as {{ session['username'] }}</a>
+        {% else %}
+        <button class="btnLogin-popup">Login</button>
+        {% endif %}
+      </nav>
+    </div>
+    <header>
+      <section class="home" id="home">
+        <div class="home-content">
+          <h3>Hi,Here is</h3>
+          <h1>钟乐</h1>
+          <h3>创意无限 创新无极限</h3>
+          <p>施工中的网页...前端：想让我适配手机端你就是让我死我也不要！！！</p>
+        </div>
+      </section>
+    </header>
+    <section class="about" id="about">
+      <div class="about-content">
+        <h1>关于</h1>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;这是一个温馨和谐的服务器，是我们不断奋斗下创造出来的，我们与玩家们一起度过了很多愉快的时光,在这里的日子将会是你值得回忆的美好。<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;我们不会不做影响平衡、破坏公平的行为。欢迎玩家提出意见或者举报违规行为，请大家自觉遵守游戏规则。<br />
+          “关山万里远征人，一望关山泪满巾。”
+        </p>
+      </div>
+      <div class="about-img">
+        <img src="/static/p1.png" alt="" />
+      </div>
+    </section>
+    <script type="text/javascript" src="static/index_script.js"></script>
+  </body>
+</html>
