@@ -9,7 +9,7 @@ from model.check_login import is_existed, exist_user, is_null
 from model.check_regist import add_user
 from flask_wtf.csrf import CSRFProtect
 from flask_wtf import FlaskForm
-#checkbox
+# checkbox
 from wtforms import StringField, PasswordField, SubmitField, EmailField, BooleanField, Form
 from wtforms.validators import DataRequired
 
@@ -34,7 +34,7 @@ class RegisterForm(FlaskForm):
     submit = SubmitField('Join us~')
 
 
-#/或者index
+# /或者index
 @app.route('/')
 @app.route('/index')
 def index():
@@ -58,7 +58,7 @@ def user_login():
                 session['username'] = username
                 if rbpwd:
                     session.permanent = True
-                #转到页面
+                # 转到页面
                 return redirect(url_for('index'))
             elif exist_user(username):
                 return render_template('login.html',
@@ -82,7 +82,7 @@ def user_login():
                                        login_form=login_form,
                                        register_form=register_form)
             add_user(username, email, password)
-            return render_template('load.html',
+            return render_template('login.html',
                                    login_form=login_form,
                                    register_form=register_form,
                                    message="你的注册很成功,可我想让你重新登陆！")
@@ -92,6 +92,6 @@ def user_login():
 
 
 if __name__ == "__main__":
-    #port8080
+    # port8080
     app.run(host='0.0.0.0', port=8080)
     app.run()
