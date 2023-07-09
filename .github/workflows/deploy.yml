@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 将 "main" 替换为你的主分支名称
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10 # 将 "3.x" 替换为你的 Python 版本
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt # 如果你有 requirements.txt 文件，请确保它位于项目根目录下
+
+      - name: Build the website
+        run: |
+          export FLASK_APP=app.py # 将 "app.py" 替换为你的 Flask 应用的入口文件
+          flask build  # 使用适合你的项目的构建命令
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build # 将 "./build" 替换为你构建生成的网站文件的目录路径
