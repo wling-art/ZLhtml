@@ -45,7 +45,7 @@ header {
 }
 
 .nav-f.active {
-    background: #5cc2d470;
+    background: #0011ff70;
     /* 渐渐显示颜色 */
     transition: all 0.5s ease;
 }
@@ -103,11 +103,13 @@ header {
     /* 与右边的图片隔开一点距离 */
     line-height: 1.8;
     padding-right: 10%;
+    color: #595959;
 
 }
 
 .about-img img {
     width: 45vw;
+    border-radius: 10px;
 }
 
 .title h1 {
@@ -172,5 +174,5 @@ header {
 
 .navigation .btnLogin-popup:hover {
     background: #fff;
-    color: #5cc2d4;
+    color: #5c5ed4;
 }
