@@ -108,7 +108,7 @@ def user_login():
                 'login.html',
                 login_form=login_form,
                 register_form=register_form,
-                message="你的注册很成功,可我想让你重新登陆！",
+                message="你的注册很成功,可我想让你重新登录！",
             )
     return render_template(
         'login.html', login_form=login_form, register_form=register_form

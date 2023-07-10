@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="static/css/main.css" />
     <link rel="shortcut icon" href="static\assets\logo.png" />
-    <title>Login~</title>
+    <title>登录至 ZLServer</title>
   </head>
 
   <body>
@@ -20,7 +20,7 @@
     </header>
     <div class="wrapper">
       <div class="form-box login">
-        <h2>登录！</h2>
+        <h2>登录</h2>
         <form method="POST">
           {{ login_form.csrf_token }}
           <div class="input-box">
@@ -43,7 +43,7 @@
           <div class="btn">{{ login_form.submit() }}</div>
           <div class="login-register">
             <p>
-              没有账户？
+              咦？没有账户吗？
               <a href="#" class="register-link">注册吧~</a>
             </p>
           </div>
