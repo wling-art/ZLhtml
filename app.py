@@ -24,7 +24,6 @@ class LoginForm(FlaskForm):
     cheackbox = BooleanField('Cheackbox')
     submit = SubmitField('GO~')
 
-
 class RegisterForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     email = EmailField('Email', validators=[DataRequired()])
