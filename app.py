@@ -58,6 +58,14 @@ def user_login():
             request.form,
         )
         if login_form.validate_on_submit() and 'GO~' in request.form.get('submit'):
+        print(
+            login_form.validate_on_submit(),
+            register_form.validate_on_submit(),
+            request.form,
+        )
+        if login_form.validate_on_submit() and 'GO~' in request.form.get(  # 提交注册
+            'submit'
+        ):
             username = login_form.username.data
             password = login_form.password.data
             rbpwd = login_form.cheackbox.data
