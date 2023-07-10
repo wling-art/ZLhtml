@@ -99,7 +99,8 @@ header {
 .about p {
     max-width: 550px;
     font-size: 1.2rem;
-    font-weight: 500;
+    /* 字粗 */
+    font-weight: 550;
     /* 与右边的图片隔开一点距离 */
     line-height: 1.8;
     padding-right: 10%;
