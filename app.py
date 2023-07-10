@@ -9,7 +9,6 @@ from model.check_login import is_existed, exist_user, is_null
 from model.check_regist import add_user
 from flask_wtf.csrf import CSRFProtect
 from flask_wtf import FlaskForm
-# checkbox
 from wtforms import StringField, PasswordField, SubmitField, EmailField, BooleanField, Form
 from wtforms.validators import DataRequired
 
