@@ -45,7 +45,6 @@ class RegisterForm(FlaskForm):
 @app.route('/index')
 def index():
     return render_template('index.html')
-    # return redirect(url_for('user_login'))
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -58,6 +57,12 @@ def user_login():
             register_form.validate_on_submit(),
             request.form,
         )
+        if login_form.validate_on_submit() and 'GO~' in request.form.get('submit'):
+            print(
+                login_form.validate_on_submit(),
+                register_form.validate_on_submit(),
+                request.form,
+            )
         if login_form.validate_on_submit() and 'GO~' in request.form.get(  # 提交注册
             'submit'
         ):
