@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="/static/css/index_sty.css" />
     <link rel="shortcut icon" href="static\assets\logo.png" />
-    <title>钟乐服务器</title>
+    <title>钟乐 - 创意无限 创新无极限</title>
   </head>
 
   <body>
@@ -16,7 +16,7 @@
         <a href="#">封禁列表</a>
         <a href="https://jq.qq.com/?_wv=1027&k=6ONq0n9F">交流群</a>
         {% if 'username' in session %}
-        <a>Logged in as {{session['username']}}</a>
+        <a>您已经登录至 {{session['username']}}</a>
         {% else %}
         <button class="btnLogin-popup">Login</button>
         {% endif %}
