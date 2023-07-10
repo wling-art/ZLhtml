@@ -108,6 +108,7 @@ header {
 
 .about-img img {
     width: 45vw;
+    border-radius: 10px;
 }
 
 .title h1 {
