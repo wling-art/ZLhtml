@@ -246,3 +246,25 @@ header {
     color: rgb(248, 158, 158);
     font-size: .9em;
 }
+
+@media screen and (max-width: 992px) {
+    .navigation a {
+        position: relative;
+        font-size: 1.7em;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        margin: 10px;
+        transition: 0.5s;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 3em;
+        user-select: none;
+        margin: 5px;
+        transition: 0.5s;
+    }
+
+
+}
