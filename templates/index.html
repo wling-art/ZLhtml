@@ -16,7 +16,7 @@
         <a href="#">封禁列表</a>
         <a href="https://jq.qq.com/?_wv=1027&k=6ONq0n9F">交流群</a>
         {% if 'username' in session %}
-        <a>您已经登录至 {{session['username']}}</a>
+        <a>~ {{session['username']}} ~</a>
         {% else %}
         <button class="btnLogin-popup">Login</button>
         {% endif %}
