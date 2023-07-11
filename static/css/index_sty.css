@@ -45,11 +45,7 @@ header {
 }
 
 .nav-f.active {
-<<<<<<< HEAD
-    background: #0011ff70;
-=======
     background: #ff840070;
->>>>>>> c11dc17a0a0bfa9d1be8fa1d8bedead4d04a90c8
     /* 渐渐显示颜色 */
     transition: all 0.5s ease;
 }
