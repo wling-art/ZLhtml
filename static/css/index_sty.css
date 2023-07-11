@@ -6,28 +6,25 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
 }
-
 
 :root {
     --bg-color: #1f242d;
     --second-bg-color: #323946;
     --text-color: #fff;
-    --main-color: #0ef -
+    --main-color: #0ef -;
 }
 
 html {
     overflow-x: hidden;
 }
 
-
-
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('background.webp') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url("background.webp") center center no-repeat;
     background-size: cover;
 }
-
 
 .nav-f {
     position: fixed;
@@ -49,7 +46,6 @@ header {
     transition: all 0.5s ease;
 }
 
-
 .home {
     min-height: 100vh;
     color: var(--text-color);
@@ -58,7 +54,6 @@ header {
     align-items: center;
     /* 里侧边有点距离 */
     padding-left: 10%;
-
 }
 
 .home-content h3 {
@@ -104,7 +99,6 @@ header {
     color: #595959;
     /* 字粗 */
     font-weight: 540;
-
 }
 
 .about-img img {
@@ -120,12 +114,11 @@ header {
     margin: 20px;
 }
 
-
 .logo {
     color: #fff;
     font-size: 2em;
     user-select: none;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .navigation a {
@@ -138,7 +131,7 @@ header {
 }
 
 .navigation a::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -3px;
@@ -148,13 +141,13 @@ header {
     border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);
-    transition: transform .5s;
+    transition: transform 0.5s;
 }
 
 .navigation a:hover:after {
     transform-origin: left;
     transform: scaleX(1);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .navigation .btnLogin-popup {
@@ -169,113 +162,120 @@ header {
     color: #fff;
     font-weight: 500;
     margin-left: 40px;
-    transition: .5s;
+    transition: 0.5s;
 }
-
 
 .navigation .btnLogin-popup:hover {
     background: #fff;
     color: #d4b45c;
 }
 
-@media screen and (max-width:992px) {
-.navigation a {
+@media screen and (max-width: 992px) {
+    .navigation a {
         position: relative;
         font-size: 1.7em;
         color: #fff;
         text-decoration: none;
         font-weight: 500;
-        margin:10px;
-        transition: .5s;
+        margin: 10px;
+        transition: 0.5s;
     }
 
-.logo{
-    color: #fff;
-    font-size: 3em;
-    user-select: none;
-    margin:5px;
-    transition: .5s;
-}
-.about {
-    min-height: 100vh;
-    color: #1f242d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-direction: column;
-    transition: .5s;
-}
-.about h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
-}
-.about img{
-    width: 80vw;
-    border-radius: 10px;
-    margin: 20px;
-}
-/* 文字宽度跟图片一样 */
-.about p{
-    max-width: 80vw;
-    font-size: 1.4rem;
-    /* 与右边的图片隔开一点距离 */
-    line-height: 1.8;
-    padding-right: 6%;
-    color: #595959;
-    /* 字粗 */
-    font-weight: 540;
-    margin: 20px;
-}
+    .logo {
+        color: #fff;
+        font-size: 3em;
+        user-select: none;
+        margin: 5px;
+        transition: 0.5s;
+    }
+
+    .about {
+        min-height: 100vh;
+        color: #1f242d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: column;
+        transition: 0.5s;
+    }
+
+    .about h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
+
+    .about img {
+        width: 80vw;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    /* 文字宽度跟图片一样 */
+    .about p {
+        max-width: 80vw;
+        font-size: 1.4rem;
+        /* 与右边的图片隔开一点距离 */
+        line-height: 1.8;
+        padding-right: 6%;
+        color: #595959;
+        /* 字粗 */
+        font-weight: 540;
+        margin: 20px;
+    }
 }
 
-@media screen and (max-width:992px) {
-.navigation a {
+@media screen and (max-width: 992px) {
+    .navigation a {
         position: relative;
         font-size: 1.7em;
         color: #fff;
         text-decoration: none;
         font-weight: 500;
-        margin:10px;
-        transition: .5s;
+        margin: 10px;
+        transition: 0.5s;
     }
 
-.logo{
-    color: #fff;
-    font-size: 3em;
-    user-select: none;
-    margin:5px;
-    transition: .5s;
-}
-.about {
-    min-height: 100vh;
-    color: #1f242d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-direction: column;
-    transition: .5s;
-}
-.about h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
-}
-.about img{
-    width: 80vw;
-    border-radius: 10px;
-    margin: 20px;
-}
-/* 文字宽度跟图片一样 */
-.about p{
-    max-width: 80vw;
-    font-size: 1.4rem;
-    /* 与右边的图片隔开一点距离 */
-    line-height: 1.8;
-    padding-right: 6%;
-    color: #595959;
-    /* 字粗 */
-    font-weight: 540;
-    margin: 20px;
-}
+    .logo {
+        color: #fff;
+        font-size: 3em;
+        user-select: none;
+        margin: 5px;
+        transition: 0.5s;
+    }
+
+    .about {
+        min-height: 100vh;
+        color: #1f242d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: column;
+        transition: 0.5s;
+    }
+
+    .about h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
+
+    .about img {
+        width: 80vw;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    /* 文字宽度跟图片一样 */
+    .about p {
+        max-width: 80vw;
+        font-size: 1.4rem;
+        /* 与右边的图片隔开一点距离 */
+        line-height: 1.8;
+        padding-right: 6%;
+        color: #595959;
+        /* 字粗 */
+        font-weight: 540;
+        margin: 20px;
+    }
 }
