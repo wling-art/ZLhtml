@@ -36,7 +36,7 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    /* background: #5cc2d470; */
+    /* background: #ff840070; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +45,7 @@ header {
 }
 
 .nav-f.active {
-    background: #5cc2d470;
+    background: #ff840070;
     /* 渐渐显示颜色 */
     transition: all 0.5s ease;
 }
@@ -172,5 +172,5 @@ header {
 
 .navigation .btnLogin-popup:hover {
     background: #fff;
-    color: #5cc2d4;
+    color: #d4b45c;
 }
