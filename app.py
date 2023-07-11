@@ -23,6 +23,7 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.urandom(24)
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
 csrf = CSRFProtect(app)
+task = None
 
 
 class LoginForm(FlaskForm):
@@ -117,4 +118,4 @@ def user_login():
 
 if __name__ == "__main__":
     # port8080
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=5000)
