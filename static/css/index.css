@@ -177,51 +177,66 @@ header {
     min-height: 100vh;
     color: #1f242d;
     display: flex;
+
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
 .advantage h1 {
-    /* 我们的优势 */
-
-    /* position: absolute; */
-    left: 810px;
-    top: 119px;
+    position: absolute;
+    min-height: 60%;
     width: 300px;
-    height: 87px;
     opacity: 1;
-
     font-family: Source Han Sans CN;
     font-size: 60px;
     font-weight: bold;
     letter-spacing: 0em;
-
     color: #3D3D3D;
 }
 
+.advantage-card {
+    /* 要与content有距离 */
+    margin-top: 15rem;
+    position: relative;
+    display: flex;
+    opacity: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    /* width: 350px; */
+    height: 450px;
+    /* 要自适应 */
+    width: 26%;
+    background: #F0F0F0;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
 .advantage-xx {
-    font-size: 16px;
-    color: #6a6a6a;
-    margin-top: 10px;
+    position: absolute;
+    /* width: 367px;
+    height: 140px; */
+    /* 自适应 */
+    margin-top: 15rem;
+    width: 70%;
+    /* height: 20%; */
+    opacity: 1;
+    font-family: Source Han Sans CN;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0em;
+
+    color: #969696;
 }
 
 
 .advantage-title {
     color: #3d3d3d;
-    margin-top: 20px;
+    margin-top: 48px;
 }
 
-.advantage-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    height: 400px;
-    background-color: #fafafa;
-    border-radius: 15px;
-    margin-left: 10px;
-}
+
 
 .advantage-icon {
     width: 75px;
