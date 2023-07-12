@@ -257,6 +257,11 @@ header {
     margin-left: 10px;
 }
 
+.youshi-icon {
+    width: 75px;
+    height: 75px;
+}
+
 @media screen and (max-width: 992px) {
     .navigation a {
         position: relative;
