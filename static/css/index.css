@@ -206,7 +206,7 @@ header {
     flex-direction: column;
     align-items: center;
     /* width: 350px; */
-    height: 450px;
+    height: 465px;
     /* 要自适应 */
     width: 26%;
     background: #F0F0F0;
@@ -216,19 +216,20 @@ header {
 
 .advantage-xx {
     position: absolute;
-    /* width: 367px;
-    height: 140px; */
     /* 自适应 */
     margin-top: 12rem;
     width: 70%;
     /* height: 20%; */
+    /* 文字间距 */
     opacity: 1;
     font-family: Source Han Sans CN;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: normal;
     letter-spacing: 0em;
-
     color: #969696;
+    text-align: justify;
+    /* 字每行间距 */
+    line-height: 1.5;
 }
 
 
@@ -236,6 +237,8 @@ header {
     color: #3d3d3d;
     margin-top: 15px;
     font-size: 26px;
+    /* 居中文字 */
+    text-align: center;
 }
 
 
@@ -256,6 +259,7 @@ header {
         margin: 10px;
         transition: 0.5s;
     }
+
 
     .logo {
         color: #fff;
