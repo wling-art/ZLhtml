@@ -174,7 +174,30 @@ header {
 
 
 .advantage {
+    min-height: 100vh;
+    color: #1f242d;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.advantage h1 {
+    /* 我们的优势 */
+
+    /* position: absolute; */
+    left: 810px;
+    top: 119px;
+    width: 300px;
+    height: 87px;
+    opacity: 1;
+
+    font-family: Source Han Sans CN;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 0em;
+
+    color: #3D3D3D;
 }
 
 .advantage-xx {
@@ -183,9 +206,6 @@ header {
     margin-top: 10px;
 }
 
-.title {
-    color: #242424;
-}
 
 .advantage-title {
     color: #3d3d3d;
