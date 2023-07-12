@@ -172,60 +172,6 @@ header {
     color: #d4b45c;
 }
 
-@media screen and (max-width: 992px) {
-    .navigation a {
-        position: relative;
-        font-size: 1.7em;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        margin: 10px;
-        transition: 0.5s;
-    }
-
-    .logo {
-        color: #fff;
-        font-size: 3em;
-        user-select: none;
-        margin: 5px;
-        transition: 0.5s;
-    }
-
-    .about {
-        min-height: 100vh;
-        color: #1f242d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        flex-direction: column;
-        transition: 0.5s;
-    }
-
-    .about h1 {
-        font-size: 3.2rem;
-        font-weight: 700;
-    }
-
-    .about img {
-        width: 80vw;
-        border-radius: 10px;
-        margin: 20px;
-    }
-
-    /* 文字宽度跟图片一样 */
-    .about p {
-        max-width: 80vw;
-        font-size: 1.4rem;
-        /* 与右边的图片隔开一点距离 */
-        line-height: 1.8;
-        padding-right: 6%;
-        color: #595959;
-        /* 字粗 */
-        font-weight: 540;
-        margin: 20px;
-    }
-}
 
 .advantage {
     display: flex;
