@@ -260,6 +260,7 @@ header {
 .youshi-icon {
     width: 75px;
     height: 75px;
+    margin-top: 60px;
 }
 
 @media screen and (max-width: 992px) {
