@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/static/css/index_sty.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
     <link rel="shortcut icon" href="static\assets\logo.png" />
     <title>钟乐 - 创意无限 创新无极限</title>
   </head>
@@ -16,7 +16,7 @@
         <a href="#">封禁列表</a>
         <a href="https://jq.qq.com/?_wv=1027&k=6ONq0n9F">交流群</a>
         {% if 'username' in session %}
-        <a> {{session['username']}}</a>
+        <a>~ {{session['username']}} ~</a>
         {% else %}
         <button class="btnLogin-popup">Login</button>
         {% endif %}
@@ -45,6 +45,32 @@
         <img src="/static/pic/p1.webp" alt="" />
       </div>
     </section>
-    <script type="text/javascript" src="static/js/index_script.js"></script>
+    <section class="advantage" id="advantage">
+      <h1>我们的优势</h1>
+      <div class="advantage-card">
+        <img class="advantage-icon" src="static/pic/icon-server.png" />
+        <h2 class="advantage-title">稳定且高配</h2>
+        <p class="advantage-xx">
+          得益于拥有4.00GHz主频的AMD Ryzen 7 3700U
+          CPU,和32GB的内存服务器TPS时常稳定在20左右,较为流畅与稳定。
+        </p>
+      </div>
+      <div class="advantage-card">
+        <img class="advantage-icon" src="static/pic/icon-heart.png" />
+        <h2 class="advantage-title">完全公益</h2>
+        <p class="advantage-xx">
+          我们没有在任何地方安置充值入口,点券也无法通过充值获得,完全依靠玩家自己的努力获得，避免出现氪
+          金变强,实现真正的公平公正。
+        </p>
+      </div>
+      <div class="advantage-card">
+        <img class="advantage-icon" src="static/pic/icon-game.png" />
+        <h2 class="advantage-title">不再单一的玩法</h2>
+        <p class="advantage-xx">
+          我们添加了粘液科技、更多附魔等插件,尽可能的丰富玩法,使玩法不再单一、枯燥。
+        </p>
+      </div>
+    </section>
   </body>
+  <script type="text/javascript" src="static/js/index_script.js"></script>
 </html>
