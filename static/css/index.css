@@ -144,13 +144,12 @@ header {
     border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);
-    transition: transform 0.5s;
+    transition: transform .5s;
 }
 
 .navigation a:hover:after {
     transform-origin: left;
     transform: scaleX(1);
-    transition: 0.5s;
 }
 
 .navigation .btnLogin-popup {
