@@ -21,7 +21,7 @@ loginLink.addEventListener('click', () => {
 //     wrapper.classList.remove('active-popup');
 // });
 
-//等待网页加载完执行wrapper.classList.add('active-popup');
+// 等待网页加载完执行wrapper.classList.add('active-popup');
 window.onload = function () {
     wrapper.classList.add('active-popup');
 }
