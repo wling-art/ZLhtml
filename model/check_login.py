@@ -7,15 +7,19 @@ def is_null(username, password):
     return username == '' or password == ''
 
 
-def is_existed(username, password):  #注册时检查用户名是否存在
+def is_existed(username, password):  # 注册时检查用户名是否存在
     sql = f"SELECT * FROM user WHERE username ='{username}' and password ='{password}'"
+    conn.ping(reconnect=True)
     cur.execute(sql)
     result = cur.fetchall()
+    conn.close()
     return len(result) != 0
 
 
-def exist_user(username):  #注册时检查用户名是否存在
+def exist_user(username):  # 注册时检查用户名是否存在
     sql = f"SELECT * FROM user WHERE username ='{username}'"
+    conn.ping(reconnect=True)
     cur.execute(sql)
     result = cur.fetchall()
+    conn.close()
     return len(result) != 0
