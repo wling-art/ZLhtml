@@ -178,23 +178,23 @@ header {
     min-height: 100vh;
     color: #1f242d;
     display: flex;
-
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
+
 .advantage h1 {
-    position: absolute;
     min-height: 60%;
-    width: 300px;
-    opacity: 1;
     font-family: Source Han Sans CN;
+    position: absolute;
+    margin-bottom: 0;
     font-size: 60px;
     font-weight: bold;
     letter-spacing: 0em;
     color: #3D3D3D;
 }
+
 
 .advantage-card {
     /* 要与content有距离 */
@@ -214,7 +214,16 @@ header {
     margin-left: 10px;
 }
 
-.advantage-xx {
+.about {
+    min-height: 100vh;
+    color: #1f242d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.advantage-text {
     position: absolute;
     /* 自适应 */
     margin-top: 12rem;
@@ -277,12 +286,6 @@ header {
         align-items: center;
         gap: 2rem;
         flex-direction: column;
-        transition: 0.5s;
-    }
-
-    .about h1 {
-        font-size: 3.2rem;
-        font-weight: 700;
     }
 
     .about img {
@@ -302,5 +305,70 @@ header {
         /* 字粗 */
         font-weight: 540;
         margin: 20px;
+    }
+
+
+    .advantage {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .advantage h1 {
+        position: relative;
+    }
+
+    .advantage-title {
+        position: absolute;
+        /* 文字居中 */
+        text-align: center;
+        /* 改变文字居中的左右位置 */
+        margin-left: 10%;
+        color: #3d3d3d;
+        margin-top: 6%;
+        font-size: 2rem;
+    }
+
+    .advantage-card {
+        /* 要与content有距离 */
+        margin-top: 5rem;
+        position: relative;
+        display: flex;
+        opacity: 1;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        /* width: 350px; */
+        width: 60%;
+        height: 120px;
+        background: #F0F0F0;
+        border-radius: 20px;
+        margin-left: 10px;
+        transition: height 0.3s ease;
+    }
+
+    .advantage-card.show-card {
+        height: 250px;
+    }
+
+    .advantage-text {
+        /* 文字隐藏 */
+        opacity: 0;
+        margin-top: 8rem;
+        transition: opacity 0.3s ease;
+    }
+
+    .advantage-text.show-text {
+        opacity: 1;
+    }
+
+    .advantage-icon {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        margin-top: 3%;
+        /* 向左边对齐 */
+        margin-left: -70%;
     }
 }
