@@ -19,3 +19,19 @@ const btnPopup = document.querySelector('.btnLogin-popup');
 btnPopup.addEventListener('click', () => {
     window.location.href = "login";
 });
+
+// 获取所有的 advantage-card 元素
+const cards = document.querySelectorAll('.advantage-card');
+
+// 为每个卡片添加点击事件监听器
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        // 获取当前卡片下的 advantage-text 元素
+        const textElement = card.querySelector('.advantage-text');
+
+        // 切换显示状态
+        card.classList.toggle('show-card');
+        textElement.classList.toggle('show-text');
+    });
+});
+
