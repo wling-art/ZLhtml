@@ -1,7 +1,10 @@
 // 缓存元素引用
 const nav = document.querySelector('.nav-f');
+const btnPopup = document.querySelector('.btnLogin-popup');
+const cards = document.querySelectorAll('.advantage-card');
+const textElements = document.querySelectorAll('.advantage-card .advantage-text');
 
-// 使用 requestAnimationFrame
+// 使用节流来限制滚动事件处理程序的执行频率
 let ticking = false;
 window.addEventListener('scroll', function () {
     if (!ticking) {
@@ -9,29 +12,20 @@ window.addEventListener('scroll', function () {
             nav.classList.toggle('active', document.documentElement.scrollTop > 1);
             ticking = false;
         });
+
         ticking = true;
     }
 });
 
-const btnPopup = document.querySelector('.btnLogin-popup');
-
-//点击按钮转到login
+// 点击按钮转到login
 btnPopup.addEventListener('click', () => {
     window.location.href = "login";
 });
 
-// 获取所有的 advantage-card 元素
-const cards = document.querySelectorAll('.advantage-card');
-
 // 为每个卡片添加点击事件监听器
-cards.forEach(card => {
+cards.forEach((card, index) => {
     card.addEventListener('click', () => {
-        // 获取当前卡片下的 advantage-text 元素
-        const textElement = card.querySelector('.advantage-text');
-
-        // 切换显示状态
         card.classList.toggle('show-card');
-        textElement.classList.toggle('show-text');
+        textElements[index].classList.toggle('show-text');
     });
 });
-
