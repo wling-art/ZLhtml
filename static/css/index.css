@@ -21,7 +21,7 @@ html {
 }
 
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(#00000000, #111111c9),
         url("background.webp") center center no-repeat;
     /* 不能拖动图片 */
     /* background-attachment: fixed; */
@@ -386,6 +386,14 @@ header {
     }
 
     .advantage-card {
+        background: #212121;
+    }
+
+    .advantage-card:hover {
+        background-color: #212121;
+    }
+
+    .advantage-card.show-card {
         background-color: #212121;
     }
 
