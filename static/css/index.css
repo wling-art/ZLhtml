@@ -181,6 +181,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 60px;
 }
 
 
@@ -344,6 +345,12 @@ header {
         transition: height 0.3s ease-in-out;
     }
 
+    .advantage-card:hover {
+        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    }
+
     .advantage-card.show-card {
         height: 250px;
     }
@@ -366,5 +373,33 @@ header {
         margin-top: 3%;
         /* 向左边对齐 */
         margin-left: -70%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #111;
+    }
+
+    .about-title {
+        color: #ffffff;
+    }
+
+    .advantage-card {
+        background-color: #212121;
+    }
+
+    .advantage-title {
+        color: #fff;
+    }
+
+    .advantage h1 {
+        color: #fff;
+    }
+
+    .nav-f.active {
+        background: #11111190;
+        /* 渐渐显示颜色 */
+        transition: all 1.3s ease;
     }
 }
