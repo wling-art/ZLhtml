@@ -347,7 +347,7 @@ header {
 
     .advantage-card:hover {
         transition: all 0.3s ease-in-out;
-        background-color: #fff;
+        background-color: #F0F0F0;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     }
 
