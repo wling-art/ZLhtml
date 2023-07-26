@@ -126,7 +126,7 @@ app = Flask(__name__)
 def login():
     if request.method != 'POST':
         return '''
-        <form method="post" action="/login">
+        <form method="post" action="/login_flask">
             <input type="text" name="username" placeholder="用户名">
             <input type="password" name="password" placeholder="密码">
             <input type="submit" value="登录">
