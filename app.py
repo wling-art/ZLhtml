@@ -156,7 +156,7 @@ def login():
     # 登录成功，设置 PHP Session 中的 userid 作为 Cookie
     userid = username  # 假设登录成功后的用户名在 'userid' 字段中
     php_cookie = response.cookies.get_dict()
-    php_cookie['PHPSESSID'] = userid  # 假设 PHP Session 的 Cookie 名称是 PHPSESSID
+    php_cookie['JSESSIONID'] = userid  # 假设 PHP Session 的 Cookie 名称是 PHPSESSID
     # 创建 Flask 响应对象，将登录成功的 JSON 响应和 Cookie 返回给用户
     flask_response = make_response(jsonify(result))
     for key, value in php_cookie.items():
