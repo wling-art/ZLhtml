@@ -162,7 +162,7 @@ def login():
     for key, value in php_cookie.items():
         flask_response.set_cookie(key, value)
     # 登录成功后重定向到 http://192.168.10.39:8123/index.html
-    return redirect('http://49.232.240.247/:8123/index.html', code=302)
+    return redirect('http://49.232.240.247:8123/index.html', code=302)
 
 
 if __name__ == "__main__":
