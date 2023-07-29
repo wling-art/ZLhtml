@@ -30,7 +30,7 @@ task = None
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
-    cheackbox = BooleanField('Cheackbox')
+    Checkbox = BooleanField('Checkbox')
     submit = SubmitField('GO~')
 
 
@@ -38,7 +38,7 @@ class RegisterForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     email = EmailField('Email', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
-    cheackbox = BooleanField('cheackbox')
+    Checkbox = BooleanField('Checkbox')
     submit = SubmitField('Join us~')
 
 
@@ -70,7 +70,7 @@ def user_login():
         ):
             username = login_form.username.data
             password = login_form.password.data
-            rbpwd = login_form.cheackbox.data
+            rbpwd = login_form.Checkbox.data
             if is_existed(username, password):
                 session['username'] = username
                 if rbpwd:
