@@ -2,4 +2,3 @@ User-agent: *
 Disallow: /static/
 Disallow: /templates/
 Disallow: /model/
-Disallow: /dynmap_web/
