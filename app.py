@@ -50,7 +50,7 @@ def index():
 
 
 @app.route('/login', methods=['GET', 'POST'])
-def user_login():
+def login():
     login_form = LoginForm()
     register_form = RegisterForm()
     if request.method == 'POST':  # 注册发送
@@ -76,7 +76,7 @@ def user_login():
                 if rbpwd:
                     session.permanent = True
                 # 转到页面
-                return redirect(url_for('index'))
+                return redirect(url_for('welcome'))
             elif exist_user(username):
                 return render_template(
                     'login.html',
@@ -115,6 +115,13 @@ def user_login():
     return render_template(
         'login.html', login_form=login_form, register_form=register_form
     )
+
+
+@app.route('/welcome', methods=['GET', 'POST'])
+def welcome():
+    if 'username' in session:
+        return render_template('welcome.html', username=session['username'])
+    return redirect(url_for('login'))
 
 
 if __name__ == "__main__":
