@@ -17,7 +17,6 @@ from wtforms import (
     BooleanField,
     Form,
 )
-import requests
 from wtforms.validators import DataRequired
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
