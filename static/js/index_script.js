@@ -1,6 +1,7 @@
 // 缓存元素引用
 const nav = document.querySelector('.nav-f');
 const btnPopup = document.querySelector('.btnLogin-popup');
+const uplogo = document.querySelector('.uplogo');
 const cards = document.querySelectorAll('.advantage-card');
 const textElements = document.querySelectorAll('.advantage-card .advantage-text');
 
@@ -20,6 +21,11 @@ window.addEventListener('scroll', function () {
 // 点击按钮转到login
 btnPopup.addEventListener('click', () => {
     window.location.href = "login";
+});
+
+// 点击按钮转到login
+uplogo.addEventListener('click', () => {
+    window.location.href = "#top";
 });
 
 // 为每个卡片添加点击事件监听器
