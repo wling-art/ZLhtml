@@ -13,7 +13,7 @@
         <nav class="navigation">
             <a href="#">Home</a>
             <a href="http://docs.tblstudio.cn">Wiki</a>
-            <a href="http://tblstudio.cn:8124">地图</a>
+            <a href="#map">地图</a>
             <a
                 href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=QLrR-96sjjag6kW4s4aEiaCgSISS82rQ&authKey=dT4xz1yY6M0JZSwPr5M1KylWGRQtKsrebJR4k5KY17ydwj7WgsH5KKKArRDzunLU&noverify=0&group_code=770813535">交流群</a>
             {% if 'username' in session %}
@@ -73,6 +73,16 @@
             </p>
         </div>
     </section>
+    <section id="map">
+        <!-- 创建内嵌网页地图,铺满网页 -->
+        <iframe class="map" src="http://tblstudio.cn:8124" width="100%" height="100%" frameborder="0"
+            scrolling="no"></iframe>
+    </section>
+    <div class="uplogo">
+        <!-- <a href="#top" target="_self">返回顶部</a> -->
+        <!-- static\assets\箭头.png -->
+        <img src="static\assets\箭头.png" href="#top" />
+    </div>
 </body>
 <script type="text/javascript" src="static/js/index_script.js"></script>
 
