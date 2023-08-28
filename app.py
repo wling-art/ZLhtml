@@ -1,11 +1,9 @@
 from datetime import timedelta
 import os
-from flask import Flask, render_template, jsonify, request, make_response, redirect
-from flask import redirect
+from flask import Flask, render_template, request, redirect
 from flask import session
 from flask import url_for
-from flask import request
-from model.check_login import is_existed, exist_user, is_null
+from model.check_login import is_existed, exist_user
 from model.check_regist import add_user
 from flask_wtf.csrf import CSRFProtect
 from flask_wtf import FlaskForm
@@ -15,8 +13,7 @@ from wtforms import (
     SubmitField,
     EmailField,
     BooleanField,
-    Form,
-)
+    )
 from wtforms.validators import DataRequired
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
@@ -76,20 +73,19 @@ def login():
                     session.permanent = True
                 # 转到页面
                 return redirect(url_for('welcome'))
-            elif exist_user(username):
+            if exist_user(username):
                 return render_template(
                     'login.html',
                     message="密码错误!!!笨蛋!",
                     login_form=login_form,
                     register_form=register_form,
                 )
-            else:
-                return render_template(
-                    'login.html',
-                    message="骗子！你根本不存在！",
-                    login_form=login_form,
-                    register_form=register_form,
-                )
+            return render_template(
+                'login.html',
+                message="骗子！你根本不存在！",
+                login_form=login_form,
+                register_form=register_form,
+            )
 
         if register_form.validate_on_submit() and 'Join us~' in request.form.get(
             'submit'
