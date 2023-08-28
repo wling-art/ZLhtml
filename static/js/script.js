@@ -1,16 +1,15 @@
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnLogin-popup');
-const iconClose = document.querySelector('.icon-close');
+const wrapper = document.querySelector(".wrapper");
+const loginLink = document.querySelector(".login-link");
+const registerLink = document.querySelector(".register-link");
+const btnPopup = document.querySelector(".btnLogin-popup");
+const iconClose = document.querySelector(".icon-close");
 
-
-registerLink.addEventListener('click', () => {
-    wrapper.classList.add('active');
+registerLink.addEventListener("click", () => {
+  wrapper.classList.add("active");
 });
 
-loginLink.addEventListener('click', () => {
-    wrapper.classList.remove('active');
+loginLink.addEventListener("click", () => {
+  wrapper.classList.remove("active");
 });
 
 // btnPopup.addEventListener('click', () => {
@@ -23,6 +22,5 @@ loginLink.addEventListener('click', () => {
 
 // 等待网页加载完执行wrapper.classList.add('active-popup');
 window.onload = function () {
-    wrapper.classList.add('active-popup');
-}
-
+  wrapper.classList.add("active-popup");
+};
