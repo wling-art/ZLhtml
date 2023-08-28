@@ -1,20 +1,15 @@
-from datetime import timedelta
 import os
-from flask import Flask, render_template, request, redirect
-from flask import session
-from flask import url_for
-from model.check_login import is_existed, exist_user
-from model.check_regist import add_user
-from flask_wtf.csrf import CSRFProtect
+from datetime import timedelta
+
+from flask import Flask, redirect, render_template, request, session, url_for
 from flask_wtf import FlaskForm
-from wtforms import (
-    StringField,
-    PasswordField,
-    SubmitField,
-    EmailField,
-    BooleanField,
-)
+from flask_wtf.csrf import CSRFProtect
+from wtforms import (BooleanField, EmailField, PasswordField, StringField,
+                     SubmitField)
 from wtforms.validators import DataRequired
+
+from model.check_login import exist_user, is_existed
+from model.check_regist import add_user
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.urandom(24)
@@ -112,7 +107,7 @@ def login():
     )
 
 
-@app.route('/welcome', methods=['GET', 'POST'])
+@app.route('/welcome', methods=['GET'])
 def welcome():
     if 'username' in session:
         return render_template('welcome.html', username=session['username'])
@@ -121,4 +116,4 @@ def welcome():
 
 if __name__ == "__main__":
     # port8080
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='127.0.0.1', port=5000)
