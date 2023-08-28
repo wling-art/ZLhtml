@@ -13,7 +13,7 @@ from wtforms import (
     SubmitField,
     EmailField,
     BooleanField,
-    )
+)
 from wtforms.validators import DataRequired
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
