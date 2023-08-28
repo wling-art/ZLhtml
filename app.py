@@ -42,10 +42,12 @@ def index():
     return render_template('index.html')
 
 
-# 作为登录界面的处理函数，主要是对于用户的登录状态进行判断，如果用户已经登录，则直接跳转到主页，否则跳转到登录界面
 # skipcq: PY-S6007
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    '''
+    作为登录界面的处理函数，主要是对于用户的登录状态进行判断，如果用户已经登录，则直接跳转到主页，否则跳转到登录界面
+    '''
     login_form = LoginForm()
     register_form = RegisterForm()
     if request.method == 'POST':  # 注册发送
@@ -105,9 +107,11 @@ def login():
     )
 
 
-# 作为欢迎界面的处理函数，登录完跳转到这个页面进行欢迎，如果是没有登录跳转到这个界面则会让用户强制跳转到登录界面进行登录
 @app.route('/welcome', methods=['GET'])
 def welcome():
+    '''
+    作为欢迎界面的处理函数，登录完跳转到这个页面进行欢迎，如果是没有登录跳转到这个界面则会让用户强制跳转到登录界面进行登录
+    '''
     if 'username' in session:
         return render_template('welcome.html', username=session['username'])
     return redirect(url_for('login'))
