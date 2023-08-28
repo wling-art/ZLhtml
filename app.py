@@ -4,7 +4,8 @@ from datetime import timedelta
 from flask import Flask, redirect, render_template, request, session, url_for
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from wtforms import BooleanField, EmailField, PasswordField, StringField, SubmitField
+from wtforms import (BooleanField, EmailField, PasswordField, StringField,
+                     SubmitField)
 from wtforms.validators import DataRequired
 
 from model.check_login import exist_user, is_existed
@@ -17,16 +18,18 @@ csrf = CSRFProtect(app)
 task = None
 
 
-# 使用flask的wtforms防火墙创建特殊输入框等
 class LoginForm(FlaskForm):
+    """使用flask的wtforms防火墙创建特殊输入框等"""
+
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     Checkbox = BooleanField('Checkbox')
     submit = SubmitField('GO~')
 
 
-# 使用flask的wtforms防火墙创建特殊输入框等
 class RegisterForm(FlaskForm):
+    """使用flask的wtforms防火墙创建特殊输入框等"""
+
     username = StringField('Username', validators=[DataRequired()])
     email = EmailField('Email', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
@@ -36,15 +39,16 @@ class RegisterForm(FlaskForm):
 
 # /或者index
 @app.route('/')
-# index函数：作为主页的处理函数
 @app.route('/index')
 def index():
+    """index函数：作为主页的处理函数"""
     return render_template('index.html')
 
 
-# 作为登录界面的处理函数，主要是对于用户的登录状态进行判断，如果用户已经登录，则直接跳转到主页，否则跳转到登录界面
+# skipcq: PY-S6007
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    """作为登录界面的处理函数，主要是对于用户的登录状态进行判断，如果用户已经登录，则直接跳转到主页，否则跳转到登录界面"""
     login_form = LoginForm()
     register_form = RegisterForm()
     if request.method == 'POST':  # 注册发送
@@ -104,9 +108,9 @@ def login():
     )
 
 
-# 作为欢迎界面的处理函数，登录完跳转到这个页面进行欢迎，如果是没有登录跳转到这个界面则会让用户强制跳转到登录界面进行登录
 @app.route('/welcome', methods=['GET'])
 def welcome():
+    """作为欢迎界面的处理函数，登录完跳转到这个页面进行欢迎，如果是没有登录跳转到这个界面则会让用户强制跳转到登录界面进行登录"""
     if 'username' in session:
         return render_template('welcome.html', username=session['username'])
     return redirect(url_for('login'))
