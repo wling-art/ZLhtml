@@ -4,10 +4,12 @@ cur = conn.cursor()
 
 
 def is_null(username, password):
+    """判断用户名和密码是否为空"""
     return username == '' or password == ''
 
 
 def is_existed(username, password):  # 注册时检查用户名是否存在
+    """判断用户名和密码是否存在"""
     sql = "SELECT * FROM user WHERE username = %s and password = %s"
     conn.ping(reconnect=True)
     cur.execute(sql, (username, password))
@@ -17,6 +19,7 @@ def is_existed(username, password):  # 注册时检查用户名是否存在
 
 
 def exist_user(username):  # 注册时检查用户名是否存在
+    """判断用户名是否存在"""
     sql = "SELECT * FROM user WHERE username = %s"
     conn.ping(reconnect=True)
     cur.execute(sql, (username,))
