@@ -14,3 +14,6 @@ name = "prettier"
 
 [[transformers]]
 name = "autopep8"
+
+[[transformers]]
+name = "isort"
