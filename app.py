@@ -112,7 +112,7 @@ def login():
     )
 
 
-@app.route('/welcome', methods=['GET', 'POST'])
+@app.route('/welcome', methods=['GET'])
 def welcome():
     if 'username' in session:
         return render_template('welcome.html', username=session['username'])
