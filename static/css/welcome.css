@@ -1,60 +1,58 @@
 * {
-    background-color: #f5f5f7;
+  background-color: #f5f5f7;
 }
 
 .welcome {
-    display: flex;
-    position: absolute;
-    top: 40%;
-    left: 12%;
-    justify-content: left;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 12%;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .welcome img {
-    width: 100px;
-    height: 100px;
-    /* 里侧边有点距离 */
-    border-radius: 20px;
-    opacity: 1;
+  width: 100px;
+  height: 100px;
+  /* 里侧边有点距离 */
+  border-radius: 20px;
+  opacity: 1;
 }
 
 .welcome h1 {
-
-    align-items: center;
-    /* 里侧边有点距离 */
-    /* margin-top: 1rem; */
-    border-radius: 20px;
-    opacity: 1;
+  align-items: center;
+  /* 里侧边有点距离 */
+  /* margin-top: 1rem; */
+  border-radius: 20px;
+  opacity: 1;
 }
 
 .welcome p {
-
-    align-items: center;
-    /* 里侧边有点距离 */
-    /* margin-top: 1rem; */
-    border-radius: 20px;
-    opacity: 1;
+  align-items: center;
+  /* 里侧边有点距离 */
+  /* margin-top: 1rem; */
+  border-radius: 20px;
+  opacity: 1;
 }
 
 .welcome h1,
 .welcomep {
-    color: #1D1D1F;
+  color: #1d1d1f;
 }
 
 .welcome p a {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
-    * {
-        background-color: #1D1D1F;
-    }
+  * {
+    background-color: #1d1d1f;
+  }
 
-    .welcome h1,
-    .welcome p {
-        color: #f5f5f7;
-    }
+  .welcome h1,
+  .welcome p {
+    color: #f5f5f7;
+  }
 }
