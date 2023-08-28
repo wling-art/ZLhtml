@@ -76,20 +76,19 @@ def login():
                     session.permanent = True
                 # 转到页面
                 return redirect(url_for('welcome'))
-            elif exist_user(username):
+            if exist_user(username):
                 return render_template(
                     'login.html',
                     message="密码错误!!!笨蛋!",
                     login_form=login_form,
                     register_form=register_form,
                 )
-            else:
-                return render_template(
-                    'login.html',
-                    message="骗子！你根本不存在！",
-                    login_form=login_form,
-                    register_form=register_form,
-                )
+            return render_template(
+                'login.html',
+                message="骗子！你根本不存在！",
+                login_form=login_form,
+                register_form=register_form,
+            )
 
         if register_form.validate_on_submit() and 'Join us~' in request.form.get(
             'submit'
