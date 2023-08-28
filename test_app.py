@@ -3,7 +3,7 @@ from app import app
 
 
 @pytest.fixture
-def client():
+def client():  # 定义用于测试的客户端
     app.config['TESTING'] = True
     with app.test_client() as client:
         yield client
