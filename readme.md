@@ -1,2 +1,5 @@
-1.禁止将缓存文件上传，如.venv（虚拟环境）,pyc(运行加速编译缓存)
-2.nope
+# class函数作用
+
+LoginForm：使用flask的wtforms防火墙创建特殊输入框等
+
+RegisterForm：同理
