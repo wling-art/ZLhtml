@@ -4,8 +4,7 @@ from datetime import timedelta
 from flask import Flask, redirect, render_template, request, session, url_for
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from wtforms import (BooleanField, EmailField, PasswordField, StringField,
-                     SubmitField)
+from wtforms import BooleanField, EmailField, PasswordField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 from model.check_login import exist_user, is_existed
@@ -44,6 +43,7 @@ def index():
 
 
 # 作为登录界面的处理函数，主要是对于用户的登录状态进行判断，如果用户已经登录，则直接跳转到主页，否则跳转到登录界面
+# skipcq: PY-S6007
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     login_form = LoginForm()
