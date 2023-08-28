@@ -4,8 +4,7 @@ from datetime import timedelta
 from flask import Flask, redirect, render_template, request, session, url_for
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from wtforms import (BooleanField, EmailField, PasswordField, StringField,
-                     SubmitField)
+from wtforms import BooleanField, EmailField, PasswordField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 from model.check_login import exist_user, is_existed
@@ -54,13 +53,7 @@ def login():
             register_form.validate_on_submit(),
             request.form,
         )
-        if login_form.validate_on_submit() and 'GO~' in request.form.get('submit'):
-            print(
-                login_form.validate_on_submit(),
-                register_form.validate_on_submit(),
-                request.form,
-            )
-        if login_form.validate_on_submit() and 'GO~' in request.form.get(  # 提交注册
+        if login_form.validate_on_submit() and 'GO~' in request.form.get(  # 判断是否为登录
             'submit'
         ):
             username = login_form.username.data
@@ -88,7 +81,7 @@ def login():
 
         if register_form.validate_on_submit() and 'Join us~' in request.form.get(
             'submit'
-        ):
+        ):  # 判断是否为注册
             username = register_form.username.data
             email = register_form.email.data
             password = register_form.password.data
