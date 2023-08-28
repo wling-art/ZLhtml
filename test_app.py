@@ -1,6 +1,5 @@
 import pytest
 from app import app
-import time
 
 
 @pytest.fixture
