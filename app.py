@@ -1,11 +1,9 @@
 from datetime import timedelta
 import os
-from flask import Flask, render_template, jsonify, request, make_response, redirect
-from flask import redirect
+from flask import Flask, render_template, request, redirect
 from flask import session
 from flask import url_for
-from flask import request
-from model.check_login import is_existed, exist_user, is_null
+from model.check_login import is_existed, exist_user
 from model.check_regist import add_user
 from flask_wtf.csrf import CSRFProtect
 from flask_wtf import FlaskForm
@@ -15,8 +13,7 @@ from wtforms import (
     SubmitField,
     EmailField,
     BooleanField,
-    Form,
-)
+    )
 from wtforms.validators import DataRequired
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
