@@ -50,9 +50,14 @@ def login():
     login_form = LoginForm()
     register_form = RegisterForm()
     if request.method == 'POST':  # 注册发送
+<<<<<<< HEAD
         if (
             login_form.validate_on_submit()
             and request.form.get('submit') == 'GO~'  # 判断是否为登录
+=======
+        if login_form.validate_on_submit() and 'GO~' == request.form.get(  # 判断是否为登录
+            'submit'
+>>>>>>> 40dc96e765c4730294d36a85bf02c187752c35a9
         ):
             username = login_form.username.data
             password = login_form.password.data
