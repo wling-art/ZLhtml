@@ -50,17 +50,34 @@
         </div>
         <div class="form-box register">
             <h2>注册？</h2>
-            <div class="login-register">
-                <h3>
-                    注册需要你进入游戏进行注册！
-                </h3>
-            </div>
-            <div class="login-register">
-                <p>
-                    原来你已经有账户了啊？
-                    <a href="#" class="login-link">回去吧~</a>
-                </p>
-            </div>
+            <form method="POST">
+                {{ register_form.csrf_token }}
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    {{ register_form.username() }}
+                    <label>用户名</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    {{ register_form.email() }}
+                    <label>邮箱</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+                    {{ register_form.password() }}
+                    <label>密码</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>{{ register_form.Checkbox() }}同意《ZLServer玩家条款》</label>
+                </div>
+                <div class="btn">{{register_form.submit() }}</div>
+                <div class="login-register">
+                    <p>
+                        原来你已经有账户了啊？
+                        <a href="#" class="login-link">回去吧~</a>
+                    </p>
+                </div>
+            </form>
         </div>
     </div>
     <script type="text/javascript" src="/static/js/script.js"></script>
