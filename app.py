@@ -51,9 +51,8 @@ def login():
     register_form = RegisterForm()
     if request.method == 'POST':  # 注册发送
         if (
-            login_form.validate_on_submit()
-            and request.form.get('submit') == 'GO~'  # 判断是否为登录
-        ):
+            login_form.validate_on_submit() and request.form.get('submit') == 'GO~'
+        ):  # 判断是否为登录
             username = login_form.username.data
             password = login_form.password.data
             rbpwd = login_form.Checkbox.data
