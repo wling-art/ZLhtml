@@ -1,4 +1,5 @@
 import bcrypt
+
 from model.config import conn
 
 cur = conn.cursor()
