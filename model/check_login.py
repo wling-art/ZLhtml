@@ -1,5 +1,6 @@
-from model.config import conn
 from hashlib import sha512
+
+from model.config import conn
 
 cur = conn.cursor()
 
