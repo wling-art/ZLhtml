@@ -11,7 +11,6 @@ from wtforms.validators import DataRequired
 from model.check_login import exist_user, is_existed
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
-WTF_CSRF_CHECK_DEFAULT = False
 app.secret_key = os.urandom(24)
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
 csrf = CSRFProtect(app)
