@@ -53,9 +53,9 @@ def login():
     if (
         request.method == 'POST'
         and (
-        login_form.validate_on_submit()
-        and request.form.get('submit') == 'GO~'
-    )
+            login_form.validate_on_submit()
+            and request.form.get('submit') == 'GO~'
+        )
     ):  # 判断是否为登录
         username = login_form.username.data
         password = login_form.password.data
