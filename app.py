@@ -4,8 +4,7 @@ from datetime import timedelta
 from flask import Flask, redirect, render_template, request, session, url_for
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from wtforms import (BooleanField, EmailField, PasswordField, StringField,
-                     SubmitField)
+from wtforms import BooleanField, EmailField, PasswordField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 from model.check_login import exist_user, is_existed
@@ -15,7 +14,6 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.urandom(24)
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
 csrf = CSRFProtect(app)
-task = None
 
 
 class LoginForm(FlaskForm):
@@ -52,13 +50,9 @@ def login():
     login_form = LoginForm()
     register_form = RegisterForm()
     if request.method == 'POST':  # 注册发送
-        print(
-            login_form.validate_on_submit(),
-            register_form.validate_on_submit(),
-            request.form,
-        )
-        if login_form.validate_on_submit() and 'GO~' in request.form.get(  # 判断是否为登录
-            'submit'
+        if (
+            login_form.validate_on_submit()
+            and request.form.get('submit') == 'GO~'  # 判断是否为登录
         ):
             username = login_form.username.data
             password = login_form.password.data
@@ -83,8 +77,9 @@ def login():
                 register_form=register_form,
             )
 
-        if register_form.validate_on_submit() and 'Join us~' in request.form.get(
-            'submit'
+        if (
+            register_form.validate_on_submit()
+            and request.form.get('submit') == 'Join us~'
         ):  # 判断是否为注册
             username = register_form.username.data
             email = register_form.email.data
