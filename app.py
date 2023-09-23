@@ -9,7 +9,6 @@ from wtforms import (BooleanField, EmailField, PasswordField, StringField,
 from wtforms.validators import DataRequired
 
 from model.check_login import exist_user, is_existed
-from model.check_regist import add_user
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.urandom(24)
@@ -49,58 +48,39 @@ def index():
 def login():
     """作为登录界面的处理函数，主要是对于用户的登录状态进行判断，如果用户已经登录，则直接跳转到主页，否则跳转到登录界面"""
     login_form = LoginForm()
-    register_form = RegisterForm()
-    if request.method == 'POST':  # 注册发送
-        if (
-            login_form.validate_on_submit() and request.form.get('submit') == 'GO~'
-        ):  # 判断是否为登录
-            username = login_form.username.data
-            password = login_form.password.data
-            rbpwd = login_form.Checkbox.data
-            if is_existed(username, password):
-                session['username'] = username
-                if rbpwd:
-                    session.permanent = True
-                # 转到页面
-                return redirect(url_for('welcome'))
-            if exist_user(username):
-                return render_template(
-                    'login.html',
-                    message="密码错误!!!笨蛋!",
-                    login_form=login_form,
-                    register_form=register_form,
-                )
+    # register_form = RegisterForm()
+    # sourcery skip: assign-if-exp, merge-nested-ifs, reintroduce-else, swap-nested-ifs
+    if (
+        request.method == 'POST'
+        and (
+            login_form.validate_on_submit()
+            and request.form.get('submit') == 'GO~'
+        )
+    ):  # 判断是否为登录
+        username = login_form.username.data
+        password = login_form.password.data
+        rbpwd = login_form.Checkbox.data
+        if is_existed(username, password):
+            session['username'] = username
+            if rbpwd:
+                session.permanent = True
+            # 转到页面
+            return redirect(url_for('welcome'))
+        if exist_user(username):
             return render_template(
                 'login.html',
-                message="骗子！你根本不存在！",
+                message="密码错误!!!笨蛋!",
                 login_form=login_form,
-                register_form=register_form,
             )
-
-        if (
-            register_form.validate_on_submit()
-            and request.form.get('submit') == 'Join us~'
-        ):  # 判断是否为注册
-            username = register_form.username.data
-            email = register_form.email.data
-            password = register_form.password.data
-            if exist_user(username):
-                return render_template(
-                    'login.html',
-                    message="拜托，有人也在用这个用户名欸!",
-                    login_form=login_form,
-                    register_form=register_form,
-                )
-            add_user(username, email, password)
-            return render_template(
-                'login.html',
-                login_form=login_form,
-                register_form=register_form,
-                message="你的注册很成功,可我想让你重新登录！",
-            )
-    return render_template(
-        'login.html', login_form=login_form, register_form=register_form
-    )
+        return render_template(
+            'login.html',
+            message="骗子！你根本不存在！",
+            login_form=login_form,
+        )
+    # return render_template(
+    #     'login.html', login_form=login_form, register_form=register_form
+    # )
+    return render_template('login.html', login_form=login_form)
 
 
 @app.route('/welcome', methods=['GET'])

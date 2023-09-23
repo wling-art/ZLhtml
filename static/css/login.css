@@ -213,9 +213,9 @@ header {
   text-decoration: none;
 }
 
-.remember-forgot a:hover {
+/* .remember-forgot a:hover {
   text-decoration: underline;
-}
+} */
 
 .btn input {
   width: 100%;
