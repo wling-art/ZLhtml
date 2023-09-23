@@ -4,7 +4,8 @@ from datetime import timedelta
 from flask import Flask, redirect, render_template, request, session, url_for
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from wtforms import BooleanField, EmailField, PasswordField, StringField, SubmitField
+from wtforms import (BooleanField, EmailField, PasswordField, StringField,
+                     SubmitField)
 from wtforms.validators import DataRequired
 
 from model.check_login import exist_user, is_existed
@@ -50,22 +51,24 @@ def login():
     login_form = LoginForm()
     register_form = RegisterForm()
     if request.method == 'POST':  # 注册发送
-<<<<<<< HEAD
+
+
+<< << << < HEAD
         if (
             login_form.validate_on_submit()
             and request.form.get('submit') == 'GO~'  # 判断是否为登录
-=======
+== == == =
         if login_form.validate_on_submit() and 'GO~' == request.form.get(  # 判断是否为登录
             'submit'
->>>>>>> 40dc96e765c4730294d36a85bf02c187752c35a9
+>> >>>> > 40dc96e765c4730294d36a85bf02c187752c35a9
         ):
-            username = login_form.username.data
-            password = login_form.password.data
-            rbpwd = login_form.Checkbox.data
+            username=login_form.username.data
+            password=login_form.password.data
+            rbpwd=login_form.Checkbox.data
             if is_existed(username, password):
-                session['username'] = username
+                session['username']=username
                 if rbpwd:
-                    session.permanent = True
+                    session.permanent=True
                 # 转到页面
                 return redirect(url_for('welcome'))
             if exist_user(username):
@@ -86,9 +89,9 @@ def login():
             register_form.validate_on_submit()
             and request.form.get('submit') == 'Join us~'
         ):  # 判断是否为注册
-            username = register_form.username.data
-            email = register_form.email.data
-            password = register_form.password.data
+            username=register_form.username.data
+            email=register_form.email.data
+            password=register_form.password.data
             if exist_user(username):
                 return render_template(
                     'login.html',
@@ -108,7 +111,7 @@ def login():
     )
 
 
-@app.route('/welcome', methods=['GET'])
+@ app.route('/welcome', methods=['GET'])
 def welcome():
     """作为欢迎界面的处理函数，登录完跳转到这个页面进行欢迎，如果是没有登录跳转到这个界面则会让用户强制跳转到登录界面进行登录"""
     if 'username' in session:
