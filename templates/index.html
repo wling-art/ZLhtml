@@ -18,7 +18,7 @@
           >交流群</a
         >
         {% if 'username' in session %}
-        <a>~ {{session['username']}} ~</a>
+        <a href="people_info">{{session['username']}}</a>
         {% else %}
         <button class="btnLogin-popup">Login</button>
         {% endif %}
