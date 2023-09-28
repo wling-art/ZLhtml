@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/people_info.css" />
+
+    <title>钟乐 | 用户中心</title>
+</head>
+
+<body>
+    <!-- 创建图片，路径为static\assets\默认头像.png -->
+    <div class="head">
+        <div class="state">
+            <p>
+                {{session['username']}}
+            </p>
+            <a>在线</a>
+            <b></b>
+        </div>
+        <div class="headpic"><img src="static\assets\默认头像.png" alt="你的头像">
+            <a></a>
+        </div>
+    </div>
+    <div class="func_box">
+        <div class="change_password">
+            <p>修改密码</p>
+            <form method="POST">
+                {{ change_box.csrf_token }}
+                <div class="old_password">
+                    <p>旧密码</p>
+                    {{ change_box.old_password() }}
+                </div>
+                <div class="new_password">
+                    <p>新密码</p>
+                    {{ change_box.new_password() }}
+                </div>
+                <a id="password_rules">·不得与旧密码一致<br>
+                    ·密码长度必须至少为5位且最多为32位<br>
+                    ·至少包含3个不同的字符和1个数字</a>
+
+                <div class="change_box">
+                    {{ change_box.submit() }}
+                </div>
+            </form>
+            <div class="error" id="error_message">{% if message %} {{message}} {% endif %}</div>
+        </div>
+    </div>
+
+    </div>
+    <script type="text/javascript" src="/static/js/people_script.js"></script>
+
+</body>
+
+</html>

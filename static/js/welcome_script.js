@@ -6,7 +6,7 @@ function showTime() {
     if (time <= 0) {
         //clearInterval(id);
 
-        location.href = "http://www.baidu.com";
+        location.href = "index";
     }
     let sp = document.getElementById("time");
     sp.innerHTML = time;
