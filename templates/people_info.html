@@ -25,7 +25,7 @@
     </div>
     <div class="func_box">
         <div class="change_password">
-            <p>修改密码</p>
+            <h1>修改密码</h1>
             <form method="POST">
                 {{ change_box.csrf_token }}
                 <div class="old_password">
@@ -45,6 +45,11 @@
                 </div>
             </form>
             <div class="error" id="error_message">{% if message %} {{message}} {% endif %}</div>
+        </div>
+        <div class="account_status">
+            <h1 class="account_status-text">状态</h1>
+            <a>封禁状态</a>
+            <a id="forbidden_state">{{banstate}}</a>
         </div>
     </div>
 

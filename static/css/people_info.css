@@ -3,6 +3,7 @@ body {
     opacity: 1;
 
     background-color: #F0F0F0;
+
 }
 
 .head {
@@ -348,4 +349,82 @@ body {
     font-feature-settings: "kern" on;
     /* 无边框按钮 */
     border: none;
+}
+
+
+.account_status {
+    /* account_status */
+
+    position: absolute;
+    left: 36.9375rem;
+    top: 0rem;
+    width: 36.5rem;
+    height: 14.5625rem;
+    border-radius: 0.625rem;
+    opacity: 1;
+
+    background: #FFFFFF;
+
+    box-sizing: border-box;
+    border: 0.125rem solid #E4E2E2;
+}
+
+.account_status-text {
+    /* 状态 */
+
+    position: absolute;
+    left: 2.5rem;
+    top: 1.9375rem;
+    width: 4.5rem;
+    height: 3.25rem;
+    opacity: 1;
+
+    font-family: Source Han Sans CN;
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0em;
+
+    font-feature-settings: "kern" on;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.account_status a {
+    /* 封禁状态 */
+
+    position: absolute;
+    left: 2.5rem;
+    top: 7.5625rem;
+    width: 5rem;
+    height: 1.8125rem;
+    opacity: 1;
+
+    font-family: Source Han Sans CN;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0em;
+
+    font-feature-settings: "kern" on;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#forbidden_state {
+    /* 未封禁 */
+
+    position: absolute;
+    left: 133px;
+    top: 121px;
+    width: 60px;
+    height: 29px;
+    opacity: 1;
+
+    font-family: Source Han Sans CN;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0em;
+
+    font-feature-settings: "kern" on;
+    color: #00B578;
 }

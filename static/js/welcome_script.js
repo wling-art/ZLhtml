@@ -8,8 +8,8 @@ function showTime() {
 
         location.href = "index";
     }
-    let sp = document.getElementById("time");
+    const sp = document.getElementById("time");
     sp.innerHTML = time;
 }
 
-let id = setInterval(showTime, 1000);
+setInterval(showTime, 1000);
