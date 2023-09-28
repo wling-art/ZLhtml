@@ -133,13 +133,12 @@ def people_info():
                     username=session['username'],
                     change_box=change_box,
                 )
-            else:
-                return render_template(
-                    'people_info.html',
-                    message="服务器错误，修改失败!请联系管理员",
-                    username=session['username'],
-                    change_box=change_box,
-                )
+            return render_template(
+                'people_info.html',
+                message="服务器错误，修改失败!请联系管理员",
+                username=session['username'],
+                change_box=change_box,
+            )
 
         # 如果一样就不修改
         # return render_template(
@@ -169,14 +168,13 @@ def validate_password_rules(old_password, new_password):
     """
     if old_password == new_password:
         return False, "新密码不得与旧密码一致"
-    elif len(new_password) < 5 or len(new_password) > 32:
+    if len(new_password) < 5 or len(new_password) > 32:
         return False, "密码长度必须至少为5位且最多为32位"
-    elif len(set(new_password)) < 4:
+    if len(set(new_password)) < 4:
         return False, "至少包含3个不同的字符和1个数字"
-    elif not any(map(str.isdigit, new_password)):
+    if not any(map(str.isdigit, new_password)):
         return False, "至少包含3个不同的字符和1个数字"
-    else:
-        return True, ""
+    return True, ""
 
 
 if __name__ == "__main__":
