@@ -4,11 +4,12 @@ from datetime import timedelta
 from flask import Flask, redirect, render_template, request, session, url_for
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from wtforms import BooleanField, EmailField, PasswordField, StringField, SubmitField
+from wtforms import (BooleanField, EmailField, PasswordField, StringField,
+                     SubmitField)
 from wtforms.validators import DataRequired
 
-from model.check_login import exist_user, is_existed
 from model.change_password import is_existed as change_is_existed
+from model.check_login import exist_user, is_existed
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.urandom(24)
@@ -115,7 +116,8 @@ def people_info():
         ):  # 判断是否为修改密码
             old_password = change_box.old_password.data
             new_password = change_box.new_password.data
-            infobool, infoerror = validate_password_rules(old_password, new_password)
+            infobool, infoerror = validate_password_rules(
+                old_password, new_password)
             if not infobool:
                 return render_template(
                     'people_info.html',
