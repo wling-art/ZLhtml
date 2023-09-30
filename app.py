@@ -1,7 +1,7 @@
 import os
 from datetime import timedelta
 
-from flask import Flask, redirect, render_template, request, session, url_for
+from flask import Flask, redirect, render_template, request, session, url_for, send_file
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
 from wtforms import (BooleanField, EmailField, PasswordField, StringField,
@@ -104,6 +104,15 @@ def welcome():
     if 'username' in session:
         return render_template('welcome.html', username=session['username'])
     return redirect(url_for('login'))
+
+
+@app.route('/download/Custom.xaml', methods=['GET'])
+def download_file():
+    # 指定要下载的文件路径
+    file_path = 'download/Custom.xaml'  # 替换为实际文件路径
+
+    # 返回文件作为下载
+    return send_file(file_path, as_attachment=True)
 
 
 @app.route('/people_info', methods=['GET', 'POST'])
