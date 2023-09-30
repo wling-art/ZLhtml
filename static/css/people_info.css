@@ -1,427 +1,426 @@
 body {
-    position: relative;
-    opacity: 1;
+  position: relative;
+  opacity: 1;
 
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .head {
-    /* 容器 17 */
+  /* 容器 17 */
 
-    position: relative;
-    left: 238px;
-    top: 11rem;
-    width: 8.375rem;
-    height: 2rem;
-    opacity: 1;
+  position: relative;
+  left: 238px;
+  top: 11rem;
+  width: 8.375rem;
+  height: 2rem;
+  opacity: 1;
 
-    /* 自动布局 */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0rem;
-    gap: 3.875rem;
+  /* 自动布局 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0rem;
+  gap: 3.875rem;
 }
 
 .state {
-    /* 在线 */
-    position: relative;
-    left: 5.875rem;
-    top: 0.0938rem;
-    width: 2.5rem;
-    height: 1.8125rem;
-    opacity: 1;
+  /* 在线 */
+  position: relative;
+  left: 5.875rem;
+  top: 0.0938rem;
+  width: 2.5rem;
+  height: 1.8125rem;
+  opacity: 1;
 
-    z-index: 1;
+  z-index: 1;
 }
 
 .state p {
-    /* {{session['username']}} */
+  /* {{session['username']}} */
 
-    position: absolute;
-    left: -1.625rem;
-    top: -7.5rem;
-    width: 25.875rem;
-    height: 3.25rem;
-    opacity: 1;
+  position: absolute;
+  left: -1.625rem;
+  top: -7.5rem;
+  width: 25.875rem;
+  height: 3.25rem;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 3.125rem;
-    font-weight: bold;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 3.125rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: rgba(0, 0, 0, 0.85);
+  font-feature-settings: "kern" on;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .state a {
-    /* 在线 */
+  /* 在线 */
 
-    position: absolute;
-    left: 0.625rem;
-    top: 0.5rem;
-    width: 2.5rem;
-    height: 1.8125rem;
-    opacity: 1;
+  position: absolute;
+  left: 0.625rem;
+  top: 0.5rem;
+  width: 2.5rem;
+  height: 1.8125rem;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 1.25rem;
-    font-weight: normal;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: #00b578;
+  font-feature-settings: "kern" on;
+  color: #00b578;
 }
 
 .state b {
-    /* 矩形 27 */
+  /* 矩形 27 */
 
-    position: absolute;
-    left: -1.625rem;
-    top: 0.375rem;
-    width: 1.25rem;
-    height: 1.25rem;
-    border-radius: 1rem;
-    opacity: 1;
+  position: absolute;
+  left: -1.625rem;
+  top: 0.375rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 1rem;
+  opacity: 1;
 
-    background: #00b578;
+  background: #00b578;
 
-    border: 0.375rem solid #ffffff;
+  border: 0.375rem solid #ffffff;
 }
 
 .headpic {
-    /* 矩形 26 */
+  /* 矩形 26 */
 
-    /* 自动布局子元素 */
-    position: static;
-    width: 32px;
-    height: 32px;
-    opacity: 1;
+  /* 自动布局子元素 */
+  position: static;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
 
-    z-index: 0;
+  z-index: 0;
 }
 
 .headpic img {
-    /* 矩形 25 */
+  /* 矩形 25 */
 
-    position: absolute;
-    left: -7.375rem;
-    top: -7.375rem;
-    width: 150px;
-    height: 150px;
-    border-radius: 4.6875rem;
-    opacity: 1;
+  position: absolute;
+  left: -7.375rem;
+  top: -7.375rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4.6875rem;
+  opacity: 1;
 }
 
 .headpic a {
-    /* 矩形 26 */
+  /* 矩形 26 */
 
-    position: absolute;
-    left: 0rem;
-    top: 0rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1.5625rem;
-    opacity: 1;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1.5625rem;
+  opacity: 1;
 
-    background: #03ffaa;
+  background: #03ffaa;
 
-    border: 0.375rem solid #ffffff;
+  border: 0.375rem solid #ffffff;
 }
 
 .func_box {
-    /* 组 6 */
+  /* 组 6 */
 
-    position: absolute;
-    left: 117px;
-    top: 19.875rem;
-    width: 73.4375rem;
-    height: 33.375rem;
-    opacity: 1;
+  position: absolute;
+  left: 117px;
+  top: 19.875rem;
+  width: 73.4375rem;
+  height: 33.375rem;
+  opacity: 1;
 
-    box-sizing: border-box;
-    border: NaNpx solid #e4e2e2;
+  box-sizing: border-box;
+  border: NaNpx solid #e4e2e2;
 }
 
 .change_password {
-    /* 矩形 28 */
+  /* 矩形 28 */
 
-    position: absolute;
-    left: 0rem;
-    top: 0rem;
-    width: 36.5rem;
-    height: 33.375rem;
-    border-radius: 0.625rem;
-    opacity: 1;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: 36.5rem;
+  height: 33.375rem;
+  border-radius: 0.625rem;
+  opacity: 1;
 
-    background: #ffffff;
+  background: #ffffff;
 
-    box-sizing: border-box;
-    border: 0.125rem solid #e4e2e2;
+  box-sizing: border-box;
+  border: 0.125rem solid #e4e2e2;
 }
 
 .change_password p {
-    /* 修改密码 */
+  /* 修改密码 */
 
-    position: absolute;
-    left: 3.0625rem;
-    top: 1.9375rem;
-    width: 30.66%;
-    height: 9.74%;
-    opacity: 1;
+  position: absolute;
+  left: 3.0625rem;
+  top: 1.9375rem;
+  width: 30.66%;
+  height: 9.74%;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 2.25rem;
-    font-weight: bold;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: rgba(0, 0, 0, 0.85);
+  font-feature-settings: "kern" on;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .old_password {
-    /* 组 7 */
+  /* 组 7 */
 
-    position: absolute;
-    left: 3.0625rem;
-    top: 7.625rem;
-    width: 83.39%;
-    height: 15.73%;
-    border-radius: 0.625rem;
-    opacity: 1;
+  position: absolute;
+  left: 3.0625rem;
+  top: 7.625rem;
+  width: 83.39%;
+  height: 15.73%;
+  border-radius: 0.625rem;
+  opacity: 1;
 
-    box-sizing: border-box;
-    /* border: 0.0938rem solid #F0F0F0; */
+  box-sizing: border-box;
+  /* border: 0.0938rem solid #F0F0F0; */
 }
 
 .old_password p {
-    /* 旧密码 */
+  /* 旧密码 */
 
-    position: absolute;
-    left: 0rem;
-    top: -1.25rem;
-    width: 13.32%;
-    height: 34.52%;
-    opacity: 1;
+  position: absolute;
+  left: 0rem;
+  top: -1.25rem;
+  width: 13.32%;
+  height: 34.52%;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: rgba(0, 0, 0, 0.6);
+  font-feature-settings: "kern" on;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .old_password input {
-    /* 矩形 29 */
+  /* 矩形 29 */
 
-    position: absolute;
-    left: 0rem;
-    top: 1.8125rem;
-    width: 30.4375rem;
-    height: 65.48%;
-    border-radius: 0.625rem;
-    opacity: 1;
+  position: absolute;
+  left: 0rem;
+  top: 1.8125rem;
+  width: 30.4375rem;
+  height: 65.48%;
+  border-radius: 0.625rem;
+  opacity: 1;
 
-    background: #f0f0f0;
+  background: #f0f0f0;
 
-    box-sizing: border-box;
-    border: 0.0938rem solid #f0f0f0;
+  box-sizing: border-box;
+  border: 0.0938rem solid #f0f0f0;
 }
 
 .new_password {
-    /* 组 9 */
+  /* 组 9 */
 
-    position: absolute;
-    left: 3.0625rem;
-    top: 13.75rem;
-    width: 83.39%;
-    height: 15.73%;
-    border-radius: 0.625rem;
-    opacity: 1;
+  position: absolute;
+  left: 3.0625rem;
+  top: 13.75rem;
+  width: 83.39%;
+  height: 15.73%;
+  border-radius: 0.625rem;
+  opacity: 1;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .new_password p {
-    /* 新密码 */
+  /* 新密码 */
 
-    position: absolute;
-    left: 0rem;
-    top: -1.25rem;
-    width: 13.32%;
-    height: 34.52%;
-    opacity: 1;
+  position: absolute;
+  left: 0rem;
+  top: -1.25rem;
+  width: 13.32%;
+  height: 34.52%;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: rgba(0, 0, 0, 0.6);
+  font-feature-settings: "kern" on;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .new_password input {
-    /* 矩形 30 */
+  /* 矩形 30 */
 
-    position: absolute;
-    left: 0rem;
-    top: 1.8125rem;
-    width: 30.4375rem;
-    height: 65.48%;
-    border-radius: 0.625rem;
-    opacity: 1;
+  position: absolute;
+  left: 0rem;
+  top: 1.8125rem;
+  width: 30.4375rem;
+  height: 65.48%;
+  border-radius: 0.625rem;
+  opacity: 1;
 
-    background: #f0f0f0;
+  background: #f0f0f0;
 
-    box-sizing: border-box;
-    border: 0.0938rem solid #f0f0f0;
+  box-sizing: border-box;
+  border: 0.0938rem solid #f0f0f0;
 }
 
 .func_box a {
-    /* ·不得与旧密码一致 ·密码必须≥8位 ·密码必须带有数字与字母 */
+  /* ·不得与旧密码一致 ·密码必须≥8位 ·密码必须带有数字与字母 */
 
-    position: absolute;
-    left: 2.6875rem;
-    top: 19.375rem;
-    width: 47.88%;
-    height: 12.92%;
-    opacity: 1;
+  position: absolute;
+  left: 2.6875rem;
+  top: 19.375rem;
+  width: 47.88%;
+  height: 12.92%;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: rgba(0, 0, 0, 0.3);
+  font-feature-settings: "kern" on;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .change_box input {
-    /* 组 2 */
+  /* 组 2 */
 
-    position: absolute;
-    left: 3.0625rem;
-    top: 24.5625rem;
-    width: 9.0625rem;
-    height: 3.25rem;
-    border-radius: 0.3125rem;
-    opacity: 1;
-    font-family: Source Han Sans CN;
-    font-size: 1.25rem;
-    font-weight: bold;
-    line-height: normal;
-    letter-spacing: 0em;
+  position: absolute;
+  left: 3.0625rem;
+  top: 24.5625rem;
+  width: 9.0625rem;
+  height: 3.25rem;
+  border-radius: 0.3125rem;
+  opacity: 1;
+  font-family: Source Han Sans CN;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: #ffffff;
-    background: #1e63b5;
-    /* 无边框按钮 */
-    border: none;
+  font-feature-settings: "kern" on;
+  color: #ffffff;
+  background: #1e63b5;
+  /* 无边框按钮 */
+  border: none;
 }
 
 .error {
-    color: rgb(248, 158, 158);
-    position: absolute;
-    left: 3.0625rem;
-    top: 29.5625rem;
-    width: 12.0625rem;
-    height: 3.25rem;
-    border-radius: 0.3125rem;
-    opacity: 1;
-    font-family: Source Han Sans CN;
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: normal;
-    letter-spacing: 0em;
+  color: rgb(248, 158, 158);
+  position: absolute;
+  left: 3.0625rem;
+  top: 29.5625rem;
+  width: 12.0625rem;
+  height: 3.25rem;
+  border-radius: 0.3125rem;
+  opacity: 1;
+  font-family: Source Han Sans CN;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    /* 无边框按钮 */
-    border: none;
+  font-feature-settings: "kern" on;
+  /* 无边框按钮 */
+  border: none;
 }
 
-
 .account_status {
-    /* account_status */
+  /* account_status */
 
-    position: absolute;
-    left: 36.9375rem;
-    top: 0rem;
-    width: 36.5rem;
-    height: 14.5625rem;
-    border-radius: 0.625rem;
-    opacity: 1;
+  position: absolute;
+  left: 36.9375rem;
+  top: 0rem;
+  width: 36.5rem;
+  height: 14.5625rem;
+  border-radius: 0.625rem;
+  opacity: 1;
 
-    background: #FFFFFF;
+  background: #ffffff;
 
-    box-sizing: border-box;
-    border: 0.125rem solid #E4E2E2;
+  box-sizing: border-box;
+  border: 0.125rem solid #e4e2e2;
 }
 
 .account_status-text {
-    /* 状态 */
+  /* 状态 */
 
-    position: absolute;
-    left: 2.5rem;
-    top: 1.9375rem;
-    width: 4.5rem;
-    height: 3.25rem;
-    opacity: 1;
+  position: absolute;
+  left: 2.5rem;
+  top: 1.9375rem;
+  width: 4.5rem;
+  height: 3.25rem;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 2.25rem;
-    font-weight: bold;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: rgba(0, 0, 0, 0.85);
+  font-feature-settings: "kern" on;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .account_status a {
-    /* 封禁状态 */
+  /* 封禁状态 */
 
-    position: absolute;
-    left: 2.5rem;
-    top: 7.5625rem;
-    width: 5rem;
-    height: 1.8125rem;
-    opacity: 1;
+  position: absolute;
+  left: 2.5rem;
+  top: 7.5625rem;
+  width: 5rem;
+  height: 1.8125rem;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: rgba(0, 0, 0, 0.6);
+  font-feature-settings: "kern" on;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 #forbidden_state {
-    /* 未封禁 */
+  /* 未封禁 */
 
-    position: absolute;
-    left: 133px;
-    top: 121px;
-    width: 60px;
-    height: 29px;
-    opacity: 1;
+  position: absolute;
+  left: 133px;
+  top: 121px;
+  width: 60px;
+  height: 29px;
+  opacity: 1;
 
-    font-family: Source Han Sans CN;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0em;
+  font-family: Source Han Sans CN;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0em;
 
-    font-feature-settings: "kern" on;
-    color: #00B578;
+  font-feature-settings: "kern" on;
+  color: #00b578;
 }

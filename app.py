@@ -1,7 +1,8 @@
 import os
 from datetime import timedelta
 
-from flask import Flask, redirect, render_template, request, session, url_for, send_file
+from flask import (Flask, redirect, render_template, request, send_file,
+                   session, url_for)
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
 from wtforms import (BooleanField, EmailField, PasswordField, StringField,
