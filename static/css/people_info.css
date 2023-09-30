@@ -162,7 +162,7 @@ body {
     border: 0.125rem solid #e4e2e2;
 }
 
-.change_password p {
+.change_password h1 {
     /* 修改密码 */
 
     position: absolute;
@@ -348,7 +348,6 @@ body {
     border: none;
 }
 
-
 .account_status {
     /* account_status */
 
@@ -360,10 +359,10 @@ body {
     border-radius: 0.625rem;
     opacity: 1;
 
-    background: #FFFFFF;
+    background: #ffffff;
 
     box-sizing: border-box;
-    border: 0.125rem solid #E4E2E2;
+    border: 0.125rem solid #e4e2e2;
 }
 
 .account_status-text {
@@ -423,5 +422,5 @@ body {
     letter-spacing: 0em;
 
     font-feature-settings: "kern" on;
-    color: #00B578;
+    color: #00b578;
 }
