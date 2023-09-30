@@ -1,4 +1,3 @@
-
 let time = 5;
 function showTime() {
 
@@ -8,8 +7,8 @@ function showTime() {
 
         location.href = "index";
     }
-    const sp = document.getElementById("time");
+    let sp = document.getElementById("time");
     sp.innerHTML = time;
 }
 
-setInterval(showTime, 1000);
+let id = setInterval(showTime, 1000);

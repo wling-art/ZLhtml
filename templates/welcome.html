@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="static/css/welcome.css" />
     <title>欢迎 - ZLServer</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="welcome">
-        <img src="static/assets/logo.png" />
-        <h1>欢迎回到ZL, {{session['username']}} !</h1>
-        <p><span id="time">5</span>秒后跳转至首页<a href="index">手动跳转</a></p>
+      <img src="static/assets/logo.png" />
+      <h1>欢迎回到ZL, {{session['username']}} !</h1>
+      <p><span id="time">5</span>秒后跳转至首页<a href="index">手动跳转</a></p>
     </div>
-</body>
-<script type="text/javascript" src="static/js/welcome_script.js"></script>
-
+  </body>
+  <script type="text/javascript" src="static/js/welcome_script.js"></script>
 </html>

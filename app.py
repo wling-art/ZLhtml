@@ -4,11 +4,12 @@ from datetime import timedelta
 from flask import Flask, redirect, render_template, request, session, url_for, send_file
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from wtforms import BooleanField, EmailField, PasswordField, StringField, SubmitField
+from wtforms import (BooleanField, EmailField, PasswordField, StringField,
+                     SubmitField)
 from wtforms.validators import DataRequired
 
-from model.check_login import exist_user, is_existed
 from model.change_password import is_existed as change_is_existed
+from model.check_login import exist_user, is_existed
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.urandom(24)
@@ -124,7 +125,8 @@ def people_info():
         ):  # 判断是否为修改密码
             old_password = change_box.old_password.data
             new_password = change_box.new_password.data
-            infobool, infoerror = validate_password_rules(old_password, new_password)
+            infobool, infoerror = validate_password_rules(
+                old_password, new_password)
             if not infobool:
                 return render_template(
                     'people_info.html',
@@ -140,13 +142,12 @@ def people_info():
                     username=session['username'],
                     change_box=change_box,
                 )
-            else:
-                return render_template(
-                    'people_info.html',
-                    message="服务器错误，修改失败!请联系管理员",
-                    username=session['username'],
-                    change_box=change_box,
-                )
+            return render_template(
+                'people_info.html',
+                message="服务器错误，修改失败!请联系管理员",
+                username=session['username'],
+                change_box=change_box,
+            )
 
         # 如果一样就不修改
         # return render_template(
@@ -176,14 +177,13 @@ def validate_password_rules(old_password, new_password):
     """
     if old_password == new_password:
         return False, "新密码不得与旧密码一致"
-    elif len(new_password) < 5 or len(new_password) > 32:
+    if len(new_password) < 5 or len(new_password) > 32:
         return False, "密码长度必须至少为5位且最多为32位"
-    elif len(set(new_password)) < 4:
+    if len(set(new_password)) < 4:
         return False, "至少包含3个不同的字符和1个数字"
-    elif not any(map(str.isdigit, new_password)):
+    if not any(map(str.isdigit, new_password)):
         return False, "至少包含3个不同的字符和1个数字"
-    else:
-        return True, ""
+    return True, ""
 
 
 if __name__ == "__main__":

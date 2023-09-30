@@ -1,89 +1,95 @@
 <!doctype html>
 <html lang="zh">
-
-<head>
+  <head>
     <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
     <link rel="shortcut icon" href="static\assets\logo.png" />
     <title>钟乐 - 创意无限 创新无极限</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="nav-f">
-        <h2 class="logo">钟乐</h2>
-        <nav class="navigation">
-            <a href="#">Home</a>
-            <a href="http://docs.tblstudio.cn">Wiki</a>
-            <a href="#map">地图</a>
-            <a
-                href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=QLrR-96sjjag6kW4s4aEiaCgSISS82rQ&authKey=dT4xz1yY6M0JZSwPr5M1KylWGRQtKsrebJR4k5KY17ydwj7WgsH5KKKArRDzunLU&noverify=0&group_code=770813535">交流群</a>
-            {% if 'username' in session %}
-            <a href="people_info">{{session['username']}}</a>
-            {% else %}
-            <button class="btnLogin-popup">Login</button>
-            {% endif %}
-        </nav>
+      <h2 class="logo">钟乐</h2>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="http://docs.tblstudio.cn">Wiki</a>
+        <a href="#map">地图</a>
+        <a
+          href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=QLrR-96sjjag6kW4s4aEiaCgSISS82rQ&authKey=dT4xz1yY6M0JZSwPr5M1KylWGRQtKsrebJR4k5KY17ydwj7WgsH5KKKArRDzunLU&noverify=0&group_code=770813535"
+          >交流群</a
+        >
+        {% if 'username' in session %}
+        <a href="people_info">{{session['username']}}</a>
+        {% else %}
+        <button class="btnLogin-popup">Login</button>
+        {% endif %}
+      </nav>
     </div>
     <header>
-        <section class="home" id="home">
-            <div class="home-content">
-                <h3>Hi,Here is</h3>
-                <h1>钟乐</h1>
-                <h3>创意无限 创新无极限</h3>
-                <p>一个拥有良好社区环境的粘液科技服，欢迎您的加入!</p>
-            </div>
-        </section>
+      <section class="home" id="home">
+        <div class="home-content">
+          <h3>Hi,Here is</h3>
+          <h1>钟乐</h1>
+          <h3>创意无限 创新无极限</h3>
+          <p>一个拥有良好社区环境的粘液科技服，欢迎您的加入!</p>
+        </div>
+      </section>
     </header>
     <section class="about" id="about">
-        <div class="about-content">
-            <h1 class="about-title">关于</h1>
-            <p class="about-xx">
-                &nbsp;&nbsp;&nbsp;&nbsp;这是一个温馨和谐的服务器，是我们不断奋斗下创造出来的，我们与玩家们一起度过了很多愉快的时光,在这里的日子将会是你值得回忆的美好。<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;我们不会做影响平衡、破坏公平的行为。欢迎玩家提出意见或者举报违规行为，请大家自觉遵守游戏规则。<br />
-                “关山万里远征人，一望关山泪满巾”
-            </p>
-        </div>
-        <div class="about-img">
-            <img src="/static/pic/p1.webp" alt="" />
-        </div>
+      <div class="about-content">
+        <h1 class="about-title">关于</h1>
+        <p class="about-xx">
+          &nbsp;&nbsp;&nbsp;&nbsp;这是一个温馨和谐的服务器，是我们不断奋斗下创造出来的，我们与玩家们一起度过了很多愉快的时光,在这里的日子将会是你值得回忆的美好。<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;我们不会做影响平衡、破坏公平的行为。欢迎玩家提出意见或者举报违规行为，请大家自觉遵守游戏规则。<br />
+          “关山万里远征人，一望关山泪满巾”
+        </p>
+      </div>
+      <div class="about-img">
+        <img src="/static/pic/p1.webp" alt="" />
+      </div>
     </section>
     <section class="advantage" id="advantage">
-        <h1 class="ys-title">我们的优势</h1>
-        <div class="advantage-card">
-            <img class="advantage-icon" src="static/pic/icon-server.png" />
-            <h2 class="advantage-title">稳定且高配</h2>
-            <p class="advantage-text">
-                得益于拥有4.00GHz主频的AMD Ryzen 7 3700U
-                CPU,和32GB的内存服务器TPS时常稳定在20左右,较为流畅与稳定。
-            </p>
-        </div>
-        <div class="advantage-card">
-            <img class="advantage-icon" src="static/pic/icon-heart.png" />
-            <h2 class="advantage-title">完全公益</h2>
-            <p class="advantage-text">
-                我们没有在任何地方安置充值入口,点券也无法通过充值获得,完全依靠玩家自己的努力获得，避免出现氪
-                金变强,实现真正的公平公正。
-            </p>
-        </div>
+      <h1 class="ys-title">我们的优势</h1>
+      <div class="advantage-card">
+        <img class="advantage-icon" src="static/pic/icon-server.png" />
+        <h2 class="advantage-title">稳定且高配</h2>
+        <p class="advantage-text">
+          得益于拥有4.00GHz主频的AMD Ryzen 7 3700U
+          CPU,和32GB的内存服务器TPS时常稳定在20左右,较为流畅与稳定。
+        </p>
+      </div>
+      <div class="advantage-card">
+        <img class="advantage-icon" src="static/pic/icon-heart.png" />
+        <h2 class="advantage-title">完全公益</h2>
+        <p class="advantage-text">
+          我们没有在任何地方安置充值入口,点券也无法通过充值获得,完全依靠玩家自己的努力获得，避免出现氪
+          金变强,实现真正的公平公正。
+        </p>
+      </div>
 
-        <div class="advantage-card">
-            <img class="advantage-icon" src="static/pic/icon-game.png" />
-            <h2 class="advantage-title">不再单一的玩法</h2>
-            <p class="advantage-text">
-                我们添加了粘液科技、更多附魔等插件,尽可能的丰富玩法,使玩法不再单一、枯燥。
-            </p>
-        </div>
+      <div class="advantage-card">
+        <img class="advantage-icon" src="static/pic/icon-game.png" />
+        <h2 class="advantage-title">不再单一的玩法</h2>
+        <p class="advantage-text">
+          我们添加了粘液科技、更多附魔等插件,尽可能的丰富玩法,使玩法不再单一、枯燥。
+        </p>
+      </div>
     </section>
     <section id="map">
-        <!-- 创建内嵌网页地图,铺满网页 -->
-        <iframe class="map" src="https://tblstudio.cn:8124" width="100%" height="100%" frameborder="0"
-            scrolling="no"></iframe>
+      <!-- 创建内嵌网页地图,铺满网页 -->
+      <iframe
+        class="map"
+        src="https://tblstudio.cn:8124"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
     </section>
     <div class="uplogo">
-        <!-- <a href="#top" target="_self">返回顶部</a> -->
-        <!-- static\assets\箭头.png -->
-        <img src="static\assets\箭头.png" href="#top" />
+      <!-- <a href="#top" target="_self">返回顶部</a> -->
+      <!-- static\assets\箭头.png -->
+      <img src="static\assets\箭头.png" href="#top" />
     </div>
-</body>
-<script type="text/javascript" src="static/js/index_script.js"></script>
-
+  </body>
+  <script type="text/javascript" src="static/js/index_script.js"></script>
 </html>
