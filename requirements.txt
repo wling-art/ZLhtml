@@ -16,5 +16,5 @@ zipp==3.17.0
 pytest==8.0.0
 bcrypt==4.1.2
 gunicorn==21.2.0
-eventlet==0.34.3
+eventlet==0.35.1
 cryptography
