@@ -6,7 +6,7 @@
 <local:MyCard Title="客户端介绍" Margin="0,0,0,15" CanSwap="True" IsSwaped="False">
     <StackPanel Margin="25,40,23,15">
         <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
-                    Text="这一个修改自Fabulously Optimized整合包的服务器整合包" />
+                    Text="这一个修改自 Fabulously Optimized 整合包的服务器整合包" />
         <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
                     Text="客户端版本: 1.20.2" />
     </StackPanel>
@@ -15,11 +15,11 @@
 <local:MyCard Title="快速操作" Margin="0,0,0,15" CanSwap="True" IsSwaped="False">
     <StackPanel Margin="25,40,23,15">
         <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
-                    Text="点击下方按钮就可以快速进行以下操作" />
+                    Text="点击下方按钮就可以快速操作哦" />
         <local:MyButton Margin="0,4,0,0" Width="140" Height="35"
-                    Text="快速进入ZLServer" EventType="启动游戏" HorizontalAlignment="Left" EventData="ZLServer Client for 1.20.2|game.tblstudio.cn" ToolTip="服务器 IP：game.tblstudio.cn" />
+                    Text="快速进入ZLServer" EventType="启动游戏" HorizontalAlignment="Left" EventData="ZLServer Client for 1.20.2|game.tblstudio.cn" ToolTip="服务器 IP: game.tblstudio.cn" />
         <local:MyButton Width="140" Height="35" Margin="0,4,0,0" HorizontalAlignment="Left" Padding="13,0,13,0"
-                    Text="打开官网" EventType="打开网页" EventData="http://tblstudio.cn:5000" />
+                    Text="打开官网" EventType="打开网页" EventData="https://www.tblstudio.cn" />
     </StackPanel>
 </local:MyCard>
 
