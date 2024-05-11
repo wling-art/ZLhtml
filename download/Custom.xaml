@@ -1,4 +1,4 @@
-﻿<!-- 这是 PCL 的主页自定义文件。你可以通过修改这个文件来自定义 PCL 主页：添加文本、打开网页、启动游戏，等等。
+<!-- 这是 PCL 的主页自定义文件。你可以通过修改这个文件来自定义 PCL 主页：添加文本、打开网页、启动游戏，等等。
      如果你倒腾这个文件把 PCL 玩炸了，把这个文件直接删除就行了。
      下列内容均基于 WPF 框架。你可以在继续之前先尝试自学 XAML 与 WPF 的基础，这能让你更轻松地理解下列内容。
      你也可以使用 Ctrl + F 快速查找。例如，若需要改变文本颜色，则搜索 “颜色” 即可。 -->
@@ -6,19 +6,19 @@
 <local:MyCard Title="客户端介绍" Margin="0,0,0,15" CanSwap="True" IsSwaped="False">
     <StackPanel Margin="25,40,23,15">
         <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
-                    Text="这一个修改自 Fabulously Optimized 整合包的服务器整合包" />
+                    Text="钟乐服务器专用整合包(优化版) by-Linye_FL" />
         <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
-                    Text="客户端版本: 1.20.2" />
+                    Text="客户端版本: 1.20.2 (第一次启动会有些慢,请耐心等候~)" />
     </StackPanel>
 </local:MyCard>
 
 <local:MyCard Title="快速操作" Margin="0,0,0,15" CanSwap="True" IsSwaped="False">
     <StackPanel Margin="25,40,23,15">
         <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
-                    Text="点击下方按钮就可以快速操作哦" />
+                    Text="                                          点击下方按钮就可以快速操作哦" />
         <local:MyButton Margin="0,4,0,0" Width="140" Height="35"
-                    Text="快速进入ZLServer" EventType="启动游戏" HorizontalAlignment="Left" EventData="ZLServer Client for 1.20.2|game.tblstudio.cn" ToolTip="服务器 IP: game.tblstudio.cn" />
-        <local:MyButton Width="140" Height="35" Margin="0,4,0,0" HorizontalAlignment="Left" Padding="13,0,13,0"
+                    Text="支持服务器" EventType="打开网页" EventData="https://afdian.net/a/ZLServer" />
+                            <local:MyButton Width="140" Height="35" Margin="0,4,0,0" HorizontalAlignment="Center" Padding="13,0,13,0"
                     Text="打开官网" EventType="打开网页" EventData="https://www.tblstudio.cn" />
     </StackPanel>
 </local:MyCard>
